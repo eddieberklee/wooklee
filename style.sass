@@ -1,0 +1,264 @@
+/* sass by eddie */
+
+@import "css3_mixins"
+@import "vspace"
+
+.clear
+  clear: both
+
+.hr
+  width: 100%
+  height: 1px
+
+$blue: #229abf
+$green: #999933
+$yellow: #f9b01e
+$red: #dc4443
+$pale: #f9f3f5
+
+$a-width: 160px
+$container-width: 820px
+
+body
+  background-color: $pale
+
+.bg-blue
+  background-color: $blue
+.bg-green
+  background-color: $green
+.bg-yellow
+  background-color: $yellow
+.bg-red
+  background-color: $red
+
+.container-width
+  width: $container-width
+  margin: 0 auto
+
+.circle
+  width: $a-width
+  height: $a-width
+  border-radius: $a-width / 2
+  float: left
+  text-align: center
+  margin-left: 60px
+.circle:nth-of-type(1)
+  margin-left: 0px
+
+header a
+  line-height: $a-width
+
+header a:nth-of-type(1)
+  img
+    width: auto
+    height: 41px
+header a:nth-of-type(2)
+  img
+    width: auto
+    height: 20px
+header a:nth-of-type(3)
+  img
+    width: auto
+    height: 20px
+header a:nth-of-type(4)
+  img
+    width: auto
+    height: 20px
+
+
+
+$w: $container-width
+$h: 360px
+$ss-side-width: 80px
+
+.ss-main
+  width: $w
+  margin: 0 auto
+
+.ss
+  width: $w + 2 * $ss-side-width
+  height: $h
+  position: relative
+  overflow: hidden
+
+.ss-row:nth-of-type(2n+1)
+  margin-bottom: 40px
+
+.ss-left, .ss-right
+  width: $ss-side-width
+  position: absolute
+  float: left
+  cursor: pointer
+
+.ss-page
+  width: $w
+  float: left
+  margin-left: $ss-side-width
+  position: relative
+
+  &:first-of-type
+    margin-left: 0
+
+$ss-button-margin-top: 165px
+.ss-left
+  top: $ss-button-margin-top
+  left: - ($ss-side-width) + $ss-side-width
+.ss-right
+  top: $ss-button-margin-top
+  right: - 1 * ($ss-side-width) + $ss-side-width
+
+.ss-left
+  text-align: left
+.ss-right
+  text-align: right
+.ss-main
+  width: $w
+
+.ss-page:nth-of-type(1)
+  z-index: 3
+  top: 0
+.ss-page:nth-of-type(2)
+  z-index: 2
+.ss-page:nth-of-type(3)
+  z-index: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+#graphicdesign-1
+  background-image: url("img/graphicdesign/1.png")
+#graphicdesign-2
+  background-image: url("img/graphicdesign/2.png")
+#graphicdesign-3
+  background-image: url("img/graphicdesign/3.png")
+#graphicdesign-4
+  background-image: url("img/graphicdesign/4.png")
+#graphicdesign-5
+  background-image: url("img/graphicdesign/5.png")
+#graphicdesign-6
+  background-image: url("img/graphicdesign/6.png")
+#graphicdesign-7
+  background-image: url("img/graphicdesign/7.png")
+#graphicdesign-8
+  background-image: url("img/graphicdesign/8.png")
+#graphicdesign-9
+  background-image: url("img/graphicdesign/9.png")
+#graphicdesign-10
+  background-image: url("img/graphicdesign/10.png")
+#graphicdesign-11
+  background-image: url("img/graphicdesign/11.png")
+#graphicdesign-12
+  background-image: url("img/graphicdesign/12.png")
+#graphicdesign-13
+  background-image: url("img/graphicdesign/13.png")
+#graphicdesign-14
+  background-image: url("img/graphicdesign/14.png")
+#graphicdesign-15
+  background-image: url("img/graphicdesign/15.png")
+#graphicdesign-16
+  background-image: url("img/graphicdesign/16.png")
+#graphicdesign-17
+  background-image: url("img/graphicdesign/17.png")
+#graphicdesign-18
+  background-image: url("img/graphicdesign/18.png")
+#graphicdesign-19
+  background-image: url("img/graphicdesign/19.png")
+#graphicdesign-20
+  background-image: url("img/graphicdesign/20.png")
+#graphicdesign-21
+  background-image: url("img/graphicdesign/21.png")
+#graphicdesign-22
+  background-image: url("img/graphicdesign/22.png")
+#graphicdesign-23
+  background-image: url("img/graphicdesign/23.png")
+#graphicdesign-24
+  background-image: url("img/graphicdesign/24.png")
+
+#photo-1
+  background-image: url("img/p/1.png")
+#photo-2
+  background-image: url("img/p/2.png")
+#photo-3
+  background-image: url("img/p/3.png")
+#photo-4
+  background-image: url("img/p/4.png")
+#photo-5
+  background-image: url("img/p/5.png")
+#photo-6
+  background-image: url("img/p/6.png")
+#photo-7
+  background-image: url("img/p/7.png")
+#photo-8
+  background-image: url("img/p/8.png")
+#photo-9
+  background-image: url("img/p/9.png")
+#photo-10
+  background-image: url("img/p/10.png")
+#photo-11
+  background-image: url("img/p/11.png")
+#photo-12
+  background-image: url("img/p/12.png")
+#photo-13
+  background-image: url("img/p/13.png")
+#photo-14
+  background-image: url("img/p/14.png")
+#photo-15
+  background-image: url("img/p/15.png")
+#photo-16
+  background-image: url("img/p/16.png")
+#photo-17
+  background-image: url("img/p/17.png")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

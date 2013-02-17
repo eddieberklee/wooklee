@@ -1,0 +1,91 @@
+!!! 5
+%html
+  %head
+    %title
+      Title
+    %link{:rel=>'stylesheet', :href=>'bootstrap/css/bootstrap.min.css'}
+    %link{:href=>'http://fonts.googleapis.com/css?family=Oxygen', :rel=>'stylesheet'}
+    %link{:rel=>'stylesheet', :href=>'style.css'}
+  %body
+    #container
+      .vspace110
+      %header.container-width
+        %a.circle.bg-blue{:href=>"index.html"}
+          %img#LL{:src=>"img/LL.png"}
+        %a.circle.bg-green{:href=>"work.html"}
+          %img#work{:src=>"img/work.png"}
+        %a.circle.bg-yellow{:href=>"memories.html"}
+          %img#mem{:src=>"img/mem.png"}
+        %a.circle.bg-red{:href=>"me.html"}
+          %img#me{:src=>"img/me.png"}
+        .clear
+      .vspace110
+      #body
+        %div.hr.bg-green
+        .vspace110
+        #ss-graphicd.ss.container-width
+          .ss-left
+            %img{:src=>"img/ss-left-green.png"}
+          .ss-main
+            - j = 1
+            .ss-long-scroll{:style=>"width: 4000px;"}
+              - (0..22).step(8).each do |i|
+                .ss-page
+                  - j += 1
+                  - if i % 8 == 0
+                    .ss-row
+                      %a.circle
+                        %img{:src=>"img/graphicdesign/#{i+1}.png"}
+                      %a.circle
+                        %img{:src=>"img/graphicdesign/#{i+2}.png"}
+                      %a.circle
+                        %img{:src=>"img/graphicdesign/#{i+3}.png"}
+                      %a.circle
+                        %img{:src=>"img/graphicdesign/#{i+4}.png"}
+                      .clear
+                    .ss-row
+                      %a.circle
+                        %img{:src=>"img/graphicdesign/#{i+5}.png"}
+                      %a.circle
+                        %img{:src=>"img/graphicdesign/#{i+6}.png"}
+                      %a.circle
+                        %img{:src=>"img/graphicdesign/#{i+7}.png"}
+                      %a.circle
+                        %img{:src=>"img/graphicdesign/#{i+8}.png"}
+                      .clear
+          .ss-right
+            %img{:src=>"img/ss-right-green.png"}
+          .clear
+        .clear
+      %footer
+    %script{:src=>'jquery-1.8.2.min.js'}
+    %script{:src=>'bootstrap/js/bootstrap.min.js'}
+    %script{:src=>'slideshow.js'}
+    :javascript
+      // CODE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
