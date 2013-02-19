@@ -42,6 +42,7 @@ body
   float: left
   text-align: center
   margin-left: 60px
+  overflow: hidden
 .circle:nth-of-type(1)
   margin-left: 0px
 
@@ -74,6 +75,7 @@ $ss-side-width: 80px
 .ss-main
   width: $w
   margin: 0 auto
+  position: relative
 
 .ss
   width: $w + 2 * $ss-side-width
@@ -90,15 +92,6 @@ $ss-side-width: 80px
   float: left
   cursor: pointer
 
-.ss-page
-  width: $w
-  float: left
-  margin-left: $ss-side-width
-  position: relative
-
-  &:first-of-type
-    margin-left: 0
-
 $ss-button-margin-top: 165px
 .ss-left
   top: $ss-button-margin-top
@@ -106,6 +99,14 @@ $ss-button-margin-top: 165px
 .ss-right
   top: $ss-button-margin-top
   right: - 1 * ($ss-side-width) + $ss-side-width
+
+.ss-page
+  width: $w
+  position: absolute
+  background-color: $pale
+
+  &:first-of-type
+    margin-left: 0
 
 .ss-left
   text-align: left
@@ -219,7 +220,12 @@ $ss-button-margin-top: 165px
   background-image: url("img/p/17.png")
 
 
-
+#me-description
+  position: absolute
+  // just above the circle
+  z-index: 2
+  text-align: left
+  color: $red
 
 
 

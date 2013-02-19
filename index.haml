@@ -21,42 +21,112 @@
         .clear
       .vspace110
       #body
-        %div.hr.bg-green
+        .hr.bg-green
         .vspace110
         #ss-graphicd.ss.container-width
           .ss-left
             %img{:src=>"img/ss-left-green.png"}
           .ss-main
-            - j = 1
-            .ss-long-scroll{:style=>"width: 4000px;"}
-              - (0..22).step(8).each do |i|
-                .ss-page
-                  - j += 1
-                  - if i % 8 == 0
-                    .ss-row
-                      %a.circle
-                        %img{:src=>"img/graphicdesign/#{i+1}.png"}
-                      %a.circle
-                        %img{:src=>"img/graphicdesign/#{i+2}.png"}
-                      %a.circle
-                        %img{:src=>"img/graphicdesign/#{i+3}.png"}
-                      %a.circle
-                        %img{:src=>"img/graphicdesign/#{i+4}.png"}
-                      .clear
-                    .ss-row
-                      %a.circle
-                        %img{:src=>"img/graphicdesign/#{i+5}.png"}
-                      %a.circle
-                        %img{:src=>"img/graphicdesign/#{i+6}.png"}
-                      %a.circle
-                        %img{:src=>"img/graphicdesign/#{i+7}.png"}
-                      %a.circle
-                        %img{:src=>"img/graphicdesign/#{i+8}.png"}
-                      .clear
+            - (0..22).step(8).each do |i|
+              .ss-page
+                - if i % 8 == 0
+                  .ss-row
+                    %a.circle
+                      %img{:src=>"img/graphicdesign/#{i+1}.png"}
+                    %a.circle
+                      %img{:src=>"img/graphicdesign/#{i+2}.png"}
+                    %a.circle
+                      %img{:src=>"img/graphicdesign/#{i+3}.png"}
+                    %a.circle
+                      %img{:src=>"img/graphicdesign/#{i+4}.png"}
+                    .clear
+                  .ss-row
+                    %a.circle
+                      %img{:src=>"img/graphicdesign/#{i+5}.png"}
+                    %a.circle
+                      %img{:src=>"img/graphicdesign/#{i+6}.png"}
+                    %a.circle
+                      %img{:src=>"img/graphicdesign/#{i+7}.png"}
+                    %a.circle
+                      %img{:src=>"img/graphicdesign/#{i+8}.png"}
+                    .clear
           .ss-right
             %img{:src=>"img/ss-right-green.png"}
           .clear
+        .vspace110
+        .hr.bg-yellow
+        .vspace110
+        #ss-photo.ss.container-width
+          .ss-left
+            %img{:src=>"img/ss-left-yellow.png"}
+          .ss-main
+            - (0..17-1).each do |i|
+              - close_row = "</div><!-- /.ss-row -->"
+              - close_page = "</div><!-- /.ss-page -->"
+              - open_page = "<div class='ss-page'>"
+              - open_row = "<div class='ss-row'>"
+              - open_a = "<a class='circle'>"
+              - put_img = "<img src='img/photo/#{i+1}.png'/>"
+              - close_a = "</a>"
+              - put_clear = "<div class='clear'></div>"
+              - eighth = (i % 8 == 0)
+              - fourth = (i % 4 == 0)
+              - zeroth = (i == 0)
+              - if eighth
+                - unless zeroth
+                  = put_clear
+                  = close_row
+                  = close_page
+                = open_page
+                = open_row
+                = open_a
+                = put_img
+                = close_a
+              - elsif fourth
+                = put_clear
+                = close_row
+                = open_row
+                = open_a
+                = put_img
+                = close_a
+              - else
+                = open_a
+                = put_img
+                = close_a
+            = "</div>"
+            = "</div>"
+          .ss-right
+            %img{:src=>"img/ss-right-yellow.png"}
+          .clear
         .clear
+        .vspace110
+        .hr.bg-red
+        .vspace110
+        .ss.container-width
+          .ss-left
+            %img{:src=>"img/ss-left-yellow.png", :style=>"visibility:hidden;"}
+          .ss-main
+            .ss-page
+              .ss-row
+                %a.circle
+                  %img{:src=>"img/aboutme_0.png"}
+                %a.circle{:style=>"position: relative; overflow: visible; top: 10px; left: -30px;"}
+                  #me-description
+                    Hello all,
+                    %br
+                    %br
+                    My name is Wook Lee.
+                    %br
+                    %br
+                    I design to create and
+                    %br
+                    imagine; photograph to
+                    %br
+                    cherish and remember.
+                %a.circle{:href=>"mailto:wooklee@berkeley.edu"}
+                  %img{:src=>"img/aboutme_1.png"}
+                %a.circle{:href=>"http://instagram.com/koow"}
+                  %img{:src=>"img/aboutme_2.png"}
       %footer
     %script{:src=>'jquery-1.8.2.min.js'}
     %script{:src=>'bootstrap/js/bootstrap.min.js'}
