@@ -552,7 +552,13 @@ header a:nth-of-type(4) img {
   width: 980px;
   height: 360px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .ss-row:nth-of-type(2n+1) {
   margin-bottom: 40px; }
@@ -561,7 +567,14 @@ header a:nth-of-type(4) img {
   width: 80px;
   position: absolute;
   float: left;
-  cursor: pointer; }
+  z-index: 99;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .ss-left {
   top: 165px;

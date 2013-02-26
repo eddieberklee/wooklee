@@ -31,23 +31,23 @@
               .ss-page
                 - if i % 8 == 0
                   .ss-row
-                    %a.circle
+                    %a.circle{:href=>"graphicdesign/#{i+1}"}
                       %img{:src=>"img/graphicdesign/#{i+1}.png"}
-                    %a.circle
+                    %a.circle{:href=>"graphicdesign/#{i+2}"}
                       %img{:src=>"img/graphicdesign/#{i+2}.png"}
-                    %a.circle
+                    %a.circle{:href=>"graphicdesign/#{i+3}"}
                       %img{:src=>"img/graphicdesign/#{i+3}.png"}
-                    %a.circle
+                    %a.circle{:href=>"graphicdesign/#{i+4}"}
                       %img{:src=>"img/graphicdesign/#{i+4}.png"}
                     .clear
                   .ss-row
-                    %a.circle
+                    %a.circle{:href=>"graphicdesign/#{i+5}"}
                       %img{:src=>"img/graphicdesign/#{i+5}.png"}
-                    %a.circle
+                    %a.circle{:href=>"graphicdesign/#{i+6}"}
                       %img{:src=>"img/graphicdesign/#{i+6}.png"}
-                    %a.circle
+                    %a.circle{:href=>"graphicdesign/#{i+7}"}
                       %img{:src=>"img/graphicdesign/#{i+7}.png"}
-                    %a.circle
+                    %a.circle{:href=>"graphicdesign/#{i+8}"}
                       %img{:src=>"img/graphicdesign/#{i+8}.png"}
                     .clear
           .ss-right
@@ -65,7 +65,7 @@
               - close_page = "</div><!-- /.ss-page -->"
               - open_page = "<div class='ss-page'>"
               - open_row = "<div class='ss-row'>"
-              - open_a = "<a class='circle'>"
+              - open_a = "<a class='circle' href='photo/#{i+1}.html'>"
               - put_img = "<img src='img/photo/#{i+1}.png'/>"
               - close_a = "</a>"
               - put_clear = "<div class='clear'></div>"

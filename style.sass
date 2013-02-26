@@ -82,6 +82,7 @@ $ss-side-width: 80px
   height: $h
   position: relative
   overflow: hidden
+  @include css3-user-select
 
 .ss-row:nth-of-type(2n+1)
   margin-bottom: 40px
@@ -90,7 +91,10 @@ $ss-side-width: 80px
   width: $ss-side-width
   position: absolute
   float: left
+  // put left and right buttons above sliding pages
+  z-index: 99
   cursor: pointer
+  @include css3-user-select
 
 $ss-button-margin-top: 165px
 .ss-left
