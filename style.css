@@ -543,6 +543,14 @@ header a:nth-of-type(4) img {
   width: auto;
   height: 20px; }
 
+.content {
+  width: 900px;
+  margin: 0 auto;
+  text-align: center; }
+
+footer {
+  min-height: 480px; }
+
 .ss-main {
   width: 820px;
   margin: 0 auto;

@@ -12,16 +12,17 @@
       %header.container-width
         %a.circle.bg-blue{:href=>"index.html"}
           %img#LL{:src=>"img/LL.png"}
-        %a.circle.bg-green{:href=>"work.html"}
+        %a.circle.bg-green{:href=>"#work_section"}
           %img#work{:src=>"img/work.png"}
-        %a.circle.bg-yellow{:href=>"memories.html"}
+        %a.circle.bg-yellow{:href=>"#memories_section"}
           %img#mem{:src=>"img/mem.png"}
-        %a.circle.bg-red{:href=>"me.html"}
+        %a.circle.bg-red{:href=>"#me_section"}
           %img#me{:src=>"img/me.png"}
         .clear
       .vspace110
       #body
-        .hr.bg-green
+        %a{:name=>"work_section"}
+          .hr.bg-green
         .vspace110
         #ss-graphicd.ss.container-width
           .ss-left
@@ -31,30 +32,31 @@
               .ss-page
                 - if i % 8 == 0
                   .ss-row
-                    %a.circle{:href=>"graphicdesign/#{i+1}"}
+                    %a.circle{:href=>"graphicdesign/#{i+1}.html"}
                       %img{:src=>"img/graphicdesign/#{i+1}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+2}"}
+                    %a.circle{:href=>"graphicdesign/#{i+2}.html"}
                       %img{:src=>"img/graphicdesign/#{i+2}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+3}"}
+                    %a.circle{:href=>"graphicdesign/#{i+3}.html"}
                       %img{:src=>"img/graphicdesign/#{i+3}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+4}"}
+                    %a.circle{:href=>"graphicdesign/#{i+4}.html"}
                       %img{:src=>"img/graphicdesign/#{i+4}.png"}
                     .clear
                   .ss-row
-                    %a.circle{:href=>"graphicdesign/#{i+5}"}
+                    %a.circle{:href=>"graphicdesign/#{i+5}.html"}
                       %img{:src=>"img/graphicdesign/#{i+5}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+6}"}
+                    %a.circle{:href=>"graphicdesign/#{i+6}.html"}
                       %img{:src=>"img/graphicdesign/#{i+6}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+7}"}
+                    %a.circle{:href=>"graphicdesign/#{i+7}.html"}
                       %img{:src=>"img/graphicdesign/#{i+7}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+8}"}
+                    %a.circle{:href=>"graphicdesign/#{i+8}.html"}
                       %img{:src=>"img/graphicdesign/#{i+8}.png"}
                     .clear
           .ss-right
             %img{:src=>"img/ss-right-green.png"}
           .clear
         .vspace110
-        .hr.bg-yellow
+        %a{:name=>"memories_section"}
+          .hr.bg-yellow
         .vspace110
         #ss-photo.ss.container-width
           .ss-left
@@ -100,7 +102,8 @@
           .clear
         .clear
         .vspace110
-        .hr.bg-red
+        %a{:name=>"me_section"}
+          .hr.bg-red
         .vspace110
         .ss.container-width
           .ss-left
