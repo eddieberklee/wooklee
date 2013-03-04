@@ -494,7 +494,7 @@
   height: 1px; }
 
 body {
-  background-color: #f9f3f5; }
+  background-color: #f9f3e5; }
 
 .bg-blue {
   background-color: #229abf; }
@@ -595,7 +595,7 @@ footer {
 .ss-page {
   width: 820px;
   position: absolute;
-  background-color: #f9f3f5; }
+  background-color: #f9f3e5; }
   .ss-page:first-of-type {
     margin-left: 0; }
 
