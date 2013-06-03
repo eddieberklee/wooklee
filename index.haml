@@ -34,7 +34,7 @@
               - close_page = "</div><!-- /.ss-page -->"
               - open_page = "<div class='ss-page'>"
               - open_row = "<div class='ss-row'>"
-              - open_a = "<a class='circle' href='graphicdesign/#{i+1}.html'>"
+              - open_a = "<a class='circle' href='graphicdesign/#{i+1}.html'><div class='black'></div>"
               - put_img = "<img src='img/graphicdesign/#{i+1}.png'/>"
               - close_a = "</a>"
               - put_clear = "<div class='clear'></div>"
@@ -80,7 +80,7 @@
               - close_page = "</div><!-- /.ss-page -->"
               - open_page = "<div class='ss-page'>"
               - open_row = "<div class='ss-row'>"
-              - open_a = "<a class='circle' href='photo/#{i+1}.html'>"
+              - open_a = "<a class='circle' href='photo/#{i+1}.html'><div class='black'></div>"
               - put_img = "<img src='img/photo/#{i+1}.png'/>"
               - close_a = "</a>"
               - put_clear = "<div class='clear'></div>"
@@ -145,6 +145,12 @@
     %script{:src=>'ganalytics.js'}
     :javascript
       $(function() {
+        $('.circle').hover(function() {
+          $(this).children('.black').css('opacity','0.3');
+        }, function() {
+          $(this).children('.black').css('opacity','0.0');
+        });
+
         $('.ss-left, .ss-right').hover(function() {
           oldsource = $(this).children('img').attr('src');
 
