@@ -29,29 +29,41 @@
           .ss-left
             %img{:src=>"img/ss-left-green.png"}
           .ss-main
-            - (0..22).step(8).each do |i|
-              .ss-page
-                - if i % 8 == 0
-                  .ss-row
-                    %a.circle{:href=>"graphicdesign/#{i+1}.html"}
-                      %img{:src=>"img/graphicdesign/#{i+1}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+2}.html"}
-                      %img{:src=>"img/graphicdesign/#{i+2}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+3}.html"}
-                      %img{:src=>"img/graphicdesign/#{i+3}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+4}.html"}
-                      %img{:src=>"img/graphicdesign/#{i+4}.png"}
-                    .clear
-                  .ss-row
-                    %a.circle{:href=>"graphicdesign/#{i+5}.html"}
-                      %img{:src=>"img/graphicdesign/#{i+5}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+6}.html"}
-                      %img{:src=>"img/graphicdesign/#{i+6}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+7}.html"}
-                      %img{:src=>"img/graphicdesign/#{i+7}.png"}
-                    %a.circle{:href=>"graphicdesign/#{i+8}.html"}
-                      %img{:src=>"img/graphicdesign/#{i+8}.png"}
-                    .clear
+            - (0..27-1).each do |i|
+              - close_row = "</div><!-- /.ss-row -->"
+              - close_page = "</div><!-- /.ss-page -->"
+              - open_page = "<div class='ss-page'>"
+              - open_row = "<div class='ss-row'>"
+              - open_a = "<a class='circle' href='graphicdesign/#{i+1}.html'>"
+              - put_img = "<img src='img/graphicdesign/#{i+1}.png'/>"
+              - close_a = "</a>"
+              - put_clear = "<div class='clear'></div>"
+              - eighth = (i % 8 == 0)
+              - fourth = (i % 4 == 0)
+              - zeroth = (i == 0)
+              - if eighth
+                - unless zeroth
+                  = put_clear
+                  = close_row
+                  = close_page
+                = open_page
+                = open_row
+                = open_a
+                = put_img
+                = close_a
+              - elsif fourth
+                = put_clear
+                = close_row
+                = open_row
+                = open_a
+                = put_img
+                = close_a
+              - else
+                = open_a
+                = put_img
+                = close_a
+            = "</div>"
+            = "</div>"
           .ss-right
             %img{:src=>"img/ss-right-green.png"}
           .clear
@@ -132,6 +144,41 @@
     %script{:src=>'slideshow.js'}
     %script{:src=>'ganalytics.js'}
     :javascript
+      $(function() {
+        $('.ss-left, .ss-right').hover(function() {
+          oldsource = $(this).children('img').attr('src');
+
+          parts = oldsource.split('.');
+          name = parts[0];
+          extension = parts[1];
+
+          indexHover = name.indexOf('-hover');
+          containsHover = indexHover >= 0;
+
+          if (containsHover) {
+            // blank
+          } else {
+            newsource = name + '-hover' + '.' + extension;
+          }
+          $(this).children('img').attr('src', newsource);
+        }, function() {
+          oldsource = $(this).children('img').attr('src');
+
+          parts = oldsource.split('.');
+          name = parts[0];
+          extension = parts[1];
+
+          indexHover = name.indexOf('-hover');
+          containsHover = indexHover >= 0;
+
+          if (containsHover) {
+            newsource = name.substring(0,indexHover) + '.' + extension;
+          } else {
+            // blank
+          }
+          $(this).children('img').attr('src', newsource);
+        });
+      });
       // CODE
 
 
