@@ -570,7 +570,7 @@ footer {
 
 .ss {
   width: 980px;
-  height: 360px;
+  height: 380px;
   position: relative;
   overflow: hidden;
   -webkit-touch-callout: none;
@@ -581,7 +581,7 @@ footer {
   user-select: none; }
 
 .ss-row:nth-of-type(2n+1) {
-  margin-bottom: 40px; }
+  margin-bottom: 60px; }
 
 .ss-left, .ss-right {
   width: 80px;
