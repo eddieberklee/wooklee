@@ -518,7 +518,7 @@
   transition: opacity 0.5s; }
 
 body {
-  background-color: #f9f3e5; }
+  background-color: white; }
 
 .bg-blue {
   background-color: #229abf; }
@@ -628,7 +628,7 @@ footer {
 .ss-page {
   width: 820px;
   position: absolute;
-  background-color: #f9f3e5; }
+  background-color: white; }
   .ss-page:first-of-type {
     margin-left: 0; }
 
