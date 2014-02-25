@@ -1,0 +1,214 @@
+!!! 5
+%html
+  %head
+    %title
+      Wook Lee
+    %link{:rel=>'stylesheet', :href=>'bootstrap/css/bootstrap.min.css'}
+    %link{:href=>'http://fonts.googleapis.com/css?family=Oxygen', :rel=>'stylesheet'}
+    %link{:rel=>'stylesheet', :href=>'font/stylesheet.css'}
+    %link{:rel=>'stylesheet', :href=>'style.css'}
+  %body
+    #container
+      .vspace110
+      %header.container-width
+        %a.circle.bg-blue{:href=>"index.html"}
+          %img#LL{:src=>"img/LL.png"}
+        %a.circle.bg-green{:href=>"#work_section"}
+          %img#work{:src=>"img/work.png"}
+        %a.circle.bg-yellow{:href=>"#memories_section"}
+          %img#mem{:src=>"img/mem.png"}
+        %a.circle.bg-red{:href=>"#me_section"}
+          %img#me{:src=>"img/me.png"}
+        .clear
+      .vspace110
+      #body
+        %a{:name=>"work_section"}
+          .hr.bg-green
+        .vspace110
+        #ss-graphicd.ss.container-width
+          .ss-left
+            %img{:src=>"img/ss-left-green.png"}
+          .ss-main
+            - (0..27-1).each do |i|
+              - close_row = "</div><!-- /.ss-row -->"
+              - close_page = "</div><!-- /.ss-page -->"
+              - open_page = "<div class='ss-page'>"
+              - open_row = "<div class='ss-row'>"
+              - open_a = "<a class='circle' href='graphicdesign/#{i+1}.html'><div class='black'></div>"
+              - put_img = "<img src='img/graphicdesign/#{i+1}.png'/>"
+              - close_a = "</a>"
+              - put_clear = "<div class='clear'></div>"
+              - eighth = (i % 8 == 0)
+              - fourth = (i % 4 == 0)
+              - zeroth = (i == 0)
+              - if eighth
+                - unless zeroth
+                  = put_clear
+                  = close_row
+                  = close_page
+                = open_page
+                = open_row
+                = open_a
+                = put_img
+                = close_a
+              - elsif fourth
+                = put_clear
+                = close_row
+                = open_row
+                = open_a
+                = put_img
+                = close_a
+              - else
+                = open_a
+                = put_img
+                = close_a
+            = "</div>"
+            = "</div>"
+          .ss-right
+            %img{:src=>"img/ss-right-green.png"}
+          .clear
+        .vspace110
+        %a{:name=>"memories_section"}
+          .hr.bg-yellow
+        .vspace110
+        #ss-photo.ss.container-width
+          .ss-left
+            %img{:src=>"img/ss-left-yellow.png"}
+          .ss-main
+            - (0..17-1).each do |i|
+              - close_row = "</div><!-- /.ss-row -->"
+              - close_page = "</div><!-- /.ss-page -->"
+              - open_page = "<div class='ss-page'>"
+              - open_row = "<div class='ss-row'>"
+              - open_a = "<a class='circle' href='photo/#{i+1}.html'><div class='black'></div>"
+              - put_img = "<img src='img/photo/#{i+1}.png'/>"
+              - close_a = "</a>"
+              - put_clear = "<div class='clear'></div>"
+              - eighth = (i % 8 == 0)
+              - fourth = (i % 4 == 0)
+              - zeroth = (i == 0)
+              - if eighth
+                - unless zeroth
+                  = put_clear
+                  = close_row
+                  = close_page
+                = open_page
+                = open_row
+                = open_a
+                = put_img
+                = close_a
+              - elsif fourth
+                = put_clear
+                = close_row
+                = open_row
+                = open_a
+                = put_img
+                = close_a
+              - else
+                = open_a
+                = put_img
+                = close_a
+            = "</div>"
+            = "</div>"
+          .ss-right
+            %img{:src=>"img/ss-right-yellow.png"}
+          .clear
+        .clear
+        .vspace110
+        %a{:name=>"me_section"}
+          .hr.bg-red
+        .vspace110
+        .ss.container-width
+          .ss-left
+            %img{:src=>"img/ss-left-yellow.png", :style=>"visibility:hidden;"}
+          .ss-main
+            .ss-page
+              .ss-row
+                %a.circle.bg-red{:style=>"position:relative;"}
+                  %img{:src=>"img/face.png", :style=>"width:143px;position:absolute;z-index:99;top:-1px;left:7px;"}
+                %a.circle{:style=>"position:relative; overflow:visible; top:10px; left:-30px;"}
+                  #me-description
+                    %br
+                    %br
+                    %br
+                    %span{:style=>"font-family:'fedra_mono_bookregular'; font-size:0.95em; position:relative; left:48px;"}
+                      Keep it simple.
+                    %br
+                %a.circle.bg-red{:href=>"mailto:wooklee@berkeley.edu", :style=>"line-height:160px;"}
+                  %img{:src=>"img/mail.png", :style=>"width:60px;"}
+                %a.circle.bg-red{:href=>"http://instagram.com/koow", :style=>"line-height:160px;"}
+                  %img{:src=>"img/instagram.png", :style=>"width:60px;"}
+      %footer
+    %script{:src=>'jquery-1.8.2.min.js'}
+    %script{:src=>'bootstrap/js/bootstrap.min.js'}
+    %script{:src=>'slideshow.js'}
+    %script{:src=>'ganalytics.js'}
+    :javascript
+      $(function() {
+        $('.circle').hover(function() {
+          $(this).children('.black').css('opacity','0.3');
+        }, function() {
+          $(this).children('.black').css('opacity','0.0');
+        });
+
+        $('.ss-left, .ss-right').hover(function() {
+          oldsource = $(this).children('img').attr('src');
+
+          parts = oldsource.split('.');
+          name = parts[0];
+          extension = parts[1];
+
+          indexHover = name.indexOf('-hover');
+          containsHover = indexHover >= 0;
+
+          if (containsHover) {
+            // blank
+          } else {
+            newsource = name + '-hover' + '.' + extension;
+          }
+          $(this).children('img').attr('src', newsource);
+        }, function() {
+          oldsource = $(this).children('img').attr('src');
+
+          parts = oldsource.split('.');
+          name = parts[0];
+          extension = parts[1];
+
+          indexHover = name.indexOf('-hover');
+          containsHover = indexHover >= 0;
+
+          if (containsHover) {
+            newsource = name.substring(0,indexHover) + '.' + extension;
+          } else {
+            // blank
+          }
+          $(this).children('img').attr('src', newsource);
+        });
+      });
+      // CODE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
