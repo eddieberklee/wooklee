@@ -45,8 +45,27 @@ $container-width: 820px
   -moz-transition: opacity $t
   transition: opacity $t
 
+.clickarea
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 280px
+  left: 0
+  z-index: 9999
+  cursor: pointer
+
 body
   background-color: $pale
+
+.whiteout
+  background-color: white
+  // min-height: 1362px
+  height: 100%
+  width: 100%
+  position: absolute
+  top: 420px
+  left: 0
+  z-index: 100
 
 .bg-blue
   background-color: $blue
@@ -62,15 +81,17 @@ body
   margin: 0 auto
   overflow: hidden
 
+bodys
+  overflow-x: hidden
+
 .main-area
   width: 620px
-  height: 380px
-  background-color: white
   position: absolute
   top: 0
-  left: 200px
+  left: 220px
   opacity: 0
   z-index: -1
+  display: none
 
   .text-area
     width: 160px
@@ -78,14 +99,16 @@ body
     background-color: white
     position: absolute
     top: 180px
-    left: -200px
+    left: -220px
     font-family: "Nunito"
     font-weight: 300
 
     .title
       text-align: center
       text-transform: uppercase
-      font-weight: 700
+      font-weight: 400
+      margin-top: 15px
+      margin-bottom: 20px
 
 .circle-container
   width: 160px
@@ -94,6 +117,8 @@ body
   top: 0
   cursor: default
   -webkit-transition: all 0.4s
+.circle-container:nth-of-type(4), .circle-container:nth-of-type(8)
+  -webkit-transition: all 0.5s
 
 .gdesign-circle
   width: $a-width
@@ -103,15 +128,15 @@ body
   text-align: center
   overflow: hidden
   cursor: pointer
+  z-index: 5
 
   .hover-trans
-    visibility: hidden
+    // visibility: hidden
+    opacity: 0
+    -webkit-transition: all 0.1s
     position: absolute
     top: 0
     left: 0
-  &:hover .hover-trans
-    visibility: visible
-    z-index: 2
 
 .circle
   width: $a-width
@@ -331,7 +356,13 @@ $ss-button-margin-top: 165px
 
 
 
-
+/* media queries */
+@media (max-width: 480px)
+  #container
+    position: absolute
+    top: 50px
+  .clickarea
+    margin-left: 0px
 
 
 

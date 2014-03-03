@@ -517,8 +517,26 @@
   -moz-transition: opacity 0.5s;
   transition: opacity 0.5s; }
 
+.clickarea {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 280px;
+  left: 0;
+  z-index: 9999;
+  cursor: pointer; }
+
 body {
   background-color: white; }
+
+.whiteout {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 420px;
+  left: 0;
+  z-index: 100; }
 
 .bg-blue {
   background-color: #229abf; }
@@ -537,28 +555,32 @@ body {
   margin: 0 auto;
   overflow: hidden; }
 
+bodys {
+  overflow-x: hidden; }
+
 .main-area {
   width: 620px;
-  height: 380px;
-  background-color: white;
   position: absolute;
   top: 0;
-  left: 200px;
+  left: 220px;
   opacity: 0;
-  z-index: -1; }
+  z-index: -1;
+  display: none; }
   .main-area .text-area {
     width: 160px;
     min-height: 220px;
     background-color: white;
     position: absolute;
     top: 180px;
-    left: -200px;
+    left: -220px;
     font-family: "Nunito";
     font-weight: 300; }
     .main-area .text-area .title {
       text-align: center;
       text-transform: uppercase;
-      font-weight: 700; }
+      font-weight: 400;
+      margin-top: 15px;
+      margin-bottom: 20px; }
 
 .circle-container {
   width: 160px;
@@ -568,6 +590,9 @@ body {
   cursor: default;
   -webkit-transition: all 0.4s; }
 
+.circle-container:nth-of-type(4), .circle-container:nth-of-type(8) {
+  -webkit-transition: all 0.5s; }
+
 .gdesign-circle {
   width: 160px;
   height: 160px;
@@ -575,15 +600,14 @@ body {
   position: relative;
   text-align: center;
   overflow: hidden;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 5; }
   .gdesign-circle .hover-trans {
-    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.1s;
     position: absolute;
     top: 0;
     left: 0; }
-  .gdesign-circle:hover .hover-trans {
-    visibility: visible;
-    z-index: 2; }
 
 .circle, .circle-photo {
   width: 160px;
@@ -827,3 +851,12 @@ footer {
   z-index: 2;
   text-align: left;
   color: #dc4443; }
+
+/* media queries */
+@media (max-width: 480px) {
+  #container {
+    position: absolute;
+    top: 50px; }
+
+  .clickarea {
+    margin-left: 0px; } }
