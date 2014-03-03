@@ -332,10 +332,13 @@
       //<![CDATA[
         function moveIcon($circ) {
 
-          $('html, body').animate({
-                scrollTop: $('#work_section').offset().top + 270
+          var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/);
+          if (!isMobile) {
+            $('html, body').animate({
+              scrollTop: $('#work_section').offset().top + 270,
             }, 500);
-          
+          }
+
           // hide all other circle-containers first
           $('.circle-container').each(function(i,o) {
               $o = $(o);
@@ -369,9 +372,6 @@
             $('.main-area').show();
 
             main_area_height = $circ.find('.main-area').height();
-            $(window).load(function() {
-              
-            });
             text_area_height = $circ.find('.text-area').height();
             if (text_area_height+240 > main_area_height) {
               main_area_height = text_area_height+240;
