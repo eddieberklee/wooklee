@@ -313,9 +313,15 @@
                 </a>
                 <a id="mailto" class='circle bg-red' href='mailto:wooklee@berkeley.edu' style='line-height:160px;'>
                   <img src='img/mail.png' style='width:60px;' />
+                  <div class="text-overlay">
+                    Click to Send Email
+                  </div>
                 </a>
-                <a class='circle bg-red' target='_blank' href='http://instagram.com/koow' style='line-height:160px;'>
+                <a id="instagram" class='circle bg-red' target='_blank' href='http://instagram.com/koow' style='line-height:160px;'>
                   <img src='img/instagram.png' style='width:60px;' />
+                  <div class="text-overlay">
+                    Click to Open Instagrm
+                  </div>
                 </a>
               </div>
             </div>
@@ -379,9 +385,6 @@
 
             $('#container').css('height', main_area_height+550);
             $('#container').css('overflow','hidden');
-
-            console.log(text_area_height);
-            console.log(main_area_height);
 
             $whiteout = $('<div class="whiteout"></div>');
             $('body').prepend($whiteout);
@@ -447,6 +450,7 @@
         // DOCUMENT.READY
         $(function() {
 
+          /*
           $('#mailto').click(function() {
             event.preventDefault;
             event.stopPropagation;
@@ -457,6 +461,7 @@
               return false;
             }
           });
+          */
 
           $('.circle').hover(function() {
             $(this).children('.white').css('opacity','1');
