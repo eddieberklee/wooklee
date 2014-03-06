@@ -882,8 +882,7 @@ footer {
 @media (max-width: 480px) {
   #container {
     position: absolute;
-    top: 50px;
-    display: none; }
+    top: 50px; }
 
   .clickarea {
     margin-left: 0px; } }
