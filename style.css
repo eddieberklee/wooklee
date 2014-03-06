@@ -885,4 +885,7 @@ footer {
     top: 50px; }
 
   .clickarea {
-    margin-left: 0px; } }
+    margin-left: 0px; }
+
+  header {
+    margin: 0 auto; } }
