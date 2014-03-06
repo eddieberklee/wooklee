@@ -582,7 +582,7 @@ bodys {
       margin-top: 15px;
       margin-bottom: 20px; }
 
-.circle-container, .gdesign-circle {
+.circle-container * {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
