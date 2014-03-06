@@ -883,7 +883,7 @@ footer {
   #container {
     position: absolute;
     top: 50px;
-    display: block; }
+    display: none; }
 
   .clickarea {
     margin-left: 0px; } }
