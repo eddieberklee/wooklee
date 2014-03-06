@@ -890,7 +890,7 @@ footer {
   .clickarea {
     margin-left: 0px; }
 
-  #lightbox {
+  .lb-outerContainer {
     left: 40px; } }
 @media (max-width: 600px) {
   #container {
