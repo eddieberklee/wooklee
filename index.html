@@ -289,7 +289,7 @@
           <div class='hr bg-red'></div>
         </a>
         <div class='vspace110'></div>
-        <div class='ss container-width'>
+        <div class='ss container-width' style="height:280px;">
           <div class='ss-left'>
             <img src='img/ss-left-yellow.png' style='visibility:hidden;' />
           </div>
@@ -415,6 +415,7 @@
         function moveBackIcon($circ) {
           if ($circ.attr('data-original-top') != null) {
             $('#container').css('overflow','visible');
+            $('#container').css('height','1900px');
 
             topp = $circ.attr('data-original-top');
             left = $circ.attr('data-original-left');
