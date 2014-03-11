@@ -686,13 +686,6 @@ body {
   color: white;
   text-decoration: none; }
 
-.circle img, .circle-photo img {
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
-
 .circle:nth-of-type(1), .circle-photo:nth-of-type(1) {
   margin-left: 0px; }
 
