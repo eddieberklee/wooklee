@@ -627,7 +627,7 @@ body {
   .gdesign-circle .hover-trans {
     color: white;
     font-family: "Montserrat";
-    font-weight: 100;
+    font-weight: 400;
     font-size: 1.35em;
     letter-spacing: 2px;
     width: 100%;
@@ -817,11 +817,11 @@ footer {
   right: -20px; }
 
 .ss-left {
-  top: 165px;
+  top: 160px;
   left: 0px; }
 
 .ss-right {
-  top: 165px;
+  top: 160px;
   right: 0px; }
 
 .ss-page {
@@ -976,6 +976,7 @@ footer {
 #me-description {
   position: absolute;
   top: 60px;
+  left: 9px;
   z-index: 2;
   text-align: center;
   width: 100%;

@@ -137,7 +137,7 @@ body
     // visibility: hidden
     color: white
     font-family: "Montserrat"
-    font-weight: 100
+    font-weight: 400
     font-size: 1.35em
     letter-spacing: 2px
     width: 100%
@@ -300,10 +300,10 @@ $ss-side-width: 80px
 
 $ss-button-margin-top: 165px
 .ss-left
-  top: $ss-button-margin-top
+  top: $ss-button-margin-top - 5px
   left: - ($ss-side-width) + $ss-side-width
 .ss-right
-  top: $ss-button-margin-top
+  top: $ss-button-margin-top - 5px
   right: - 1 * ($ss-side-width) + $ss-side-width
 
 .ss-page
@@ -426,6 +426,7 @@ $ss-button-margin-top: 165px
 #me-description
   position: absolute
   top: 60px
+  left: 9px
   // just above the circle
   z-index: 2
   text-align: center
