@@ -1,3 +1,4 @@
+
 /* sass by eddie */
 
 @import "css3_mixins"
@@ -29,9 +30,7 @@ $container-width: 820px
   z-index: 2
   opacity: 0
   $t: 0.2s
-  -webkit-transition: opacity $t
-  -moz-transition: opacity $t
-  transition: opacity $t
+  @include css3-transition(opacity,$t)
 
 .white
   background-color: white
@@ -42,9 +41,7 @@ $container-width: 820px
   z-index: 2
   opacity: 0
   $t: 0.5s
-  -webkit-transition: opacity $t
-  -moz-transition: opacity $t
-  transition: opacity $t
+  @include css3-transition(opacity,$t)
 
 .clickarea
   width: 100%
@@ -53,7 +50,7 @@ $container-width: 820px
   top: 280px
   left: 0
   z-index: 9999
-  cursor: url("img/greenex.png"), auto
+  cursor: url("img/redex.png"), auto
 
 body
   background-color: $pale
@@ -108,8 +105,9 @@ bodys
       font-family: "Montserrat"
       text-align: center
       text-transform: uppercase
-      font-weight: 400
-      margin-top: 15px
+      font-weight: 700
+      letter-spacing: 1px
+      margin-top: 7px
       margin-bottom: 20px
 
 body
@@ -121,7 +119,7 @@ body
   position: absolute
   top: 0
   cursor: default
-  -webkit-transition: all 0.4s
+  @include css3-transition(all,0.3s)
 .circle-container:nth-of-type(4), .circle-container:nth-of-type(8)
   -webkit-transition: all 0.5s
 
@@ -137,18 +135,41 @@ body
 
   .hover-trans
     // visibility: hidden
+    color: white
+    font-family: "Montserrat"
+    font-weight: 100
+    font-size: 1.35em
+    letter-spacing: 2px
+    width: 100%
+    height: 100%
+    line-height: 25px
+    background-color: $green
     opacity: 0
-    -webkit-transition: all 0.1s
+    @include css3-transition(all,0.3s)
     position: absolute
     top: 0
     left: 0
+    p
+      position: relative
+      top: 44px
+  .hover-trans-graphic p
+    top: 68px
 
 .circle
   width: $a-width
   height: $a-width
+  line-height: $a-width
   border-radius: $a-width / 2
+  @include css3-transition(all,0.2s)
+  text-transform: uppercase
+  color: white
+  font-family: "Montserrat"
+  font-weight: 500
+  font-size: 1.3em
+  letter-spacing: 2px
   float: left
   position: relative
+  left: 0
   text-align: center
   margin-left: 60px
   overflow: hidden
@@ -161,22 +182,33 @@ body
   &:hover .hover-trans
     visibility: visible
     z-index: 2
+.circle:nth-of-type(3) 
+  @include css3-transition(all,0.08s)
+.circle:hover, .circle:hover span
+  color: white
+  text-decoration: none
+  font-size: 2.4em
+.circle:nth-of-type(3) span
+  margin-left: -20px
+  position: relative
+  left: 11px
+  @include css3-transition(all,0.1s)
+.circle:nth-of-type(3):hover span
+  left: -35px
+  
 
 .circle:nth-of-type(1)
   margin-left: 0px
 
 .circle-photo
   @extend .circle
+.circle-photo
+  line-height: 1em
 
-#mailto img, #instagram img
-  opacity: 1
-  -webkit-transition: all 0.2s
-#mailto:hover img, #instagram:hover img
-  opacity: 0
 #mailto .text-overlay, #instagram .text-overlay
   opacity: 0
   position: absolute
-  top: 66px
+  top: 69px
   left: 20px
   text-align: center
   width: 120px
@@ -184,10 +216,24 @@ body
   color: white
   line-height: 130px
   text-transform: uppercase
-  font-family: "Lato"
+  font-family: "Montserrat"
   font-weight: 500
-  font-size: 1.1em
+  font-size: 0.5em
+  letter-spacing: 3px
   line-height: 1.2em
+#instagram:hover .text-overlay, #mailto:hover .text-overlay
+  font-size: 0.5em
+#instagram .text-overlay
+  left: 77px
+  @include css3-transition(all,0.1s)
+#instagram:hover .text-overlay
+  left: 16px
+
+#mailto img, #instagram img
+  opacity: 1
+  @include css3-transition(all,0.2s)
+#mailto:hover img, #instagram:hover img
+  opacity: 0
 #mailto:hover .text-overlay, #instagram:hover .text-overlay
   opacity: 1
 
@@ -380,8 +426,15 @@ $ss-button-margin-top: 165px
   position: absolute
   // just above the circle
   z-index: 2
-  text-align: left
+  text-align: center
+  width: 100%
+  height: 100%
   color: $red
+  text-transform: uppercase
+  font-family: "Montserrat"
+  font-weight: 500
+  font-size: 1.3em
+  letter-spacing: 2px
 
 
 
