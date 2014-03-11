@@ -22,7 +22,7 @@
         <a class='circle bg-blue' href='index.html'>
           <img id='LL' src='img/LL.png' />
         </a>
-        <a id="work_section" class='circle bg-green' href='#work_section'>
+        <a id="work_header_icon" class='circle bg-green' href='#work_section'>
           <img id='work' src='img/work.png' />
         </a>
         <a class='circle bg-yellow' href='#memories_section'>
@@ -35,7 +35,7 @@
       </header>
       <div class='vspace110'></div>
       <div id='body'>
-        <a name='work_section'>
+        <a name="work_section">
           <div class='hr bg-green'></div>
         </a>
         <div class='vspace110'></div>
@@ -343,7 +343,7 @@
           var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/);
           if (!isMobile) {
             $('html, body').animate({
-              scrollTop: $('#work_section').offset().top + 270,
+              scrollTop: $('#work_header_icon').offset().top + 270,
             }, 500);
           }
 
@@ -444,7 +444,7 @@
             $circ.attr('data-moved','false');
 
             $('html, body').animate({
-                scrollTop: $('#work_section').offset().top + 270
+                scrollTop: $('#work_header_icon').offset().top + 270
             }, 500);
           }
         }
