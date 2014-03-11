@@ -696,7 +696,7 @@ body {
 
 .circle:hover img#LL, .circle-photo:hover img#LL {
   width: 112px;
-  height: 41px; }
+  height: 43px; }
 
 .circle:nth-of-type(1), .circle-photo:nth-of-type(1) {
   margin-left: 0px; }
