@@ -723,9 +723,6 @@ footer {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .ss-left img, .ss-right img {
-    width: 23px;
-    height: 43px; }
 
 .ss-left {
   top: 165px;
