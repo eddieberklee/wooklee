@@ -684,8 +684,7 @@ body {
 
 .circle:hover, .circle-photo:hover {
   color: white;
-  text-decoration: none;
-  font-size: 1.4em; }
+  text-decoration: none; }
 
 .circle img, .circle-photo img {
   -o-transition: all 0.5s;
@@ -693,10 +692,6 @@ body {
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
-
-.circle:hover img#LL, .circle-photo:hover img#LL {
-  width: 112px;
-  height: 43px; }
 
 .circle:nth-of-type(1), .circle-photo:nth-of-type(1) {
   margin-left: 0px; }
