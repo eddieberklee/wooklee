@@ -729,6 +729,7 @@ body {
 
 #instagram .text-overlay {
   left: 77px;
+  font-size: 17px;
   -o-transition: all 0.1s;
   -ms-transition: all 0.1s;
   -moz-transition: all 0.1s;
@@ -978,6 +979,7 @@ footer {
 
 #me-description {
   position: absolute;
+  top: 60px;
   z-index: 2;
   text-align: center;
   width: 100%;
@@ -986,8 +988,19 @@ footer {
   text-transform: uppercase;
   font-family: "Montserrat";
   font-weight: 500;
-  font-size: 1.3em;
-  letter-spacing: 2px; }
+  font-size: 17px;
+  letter-spacing: 2px;
+  line-height: 25px; }
+  #me-description span {
+    color: #dc4443; }
+
+#me-description:hover {
+  font-size: 7px;
+  line-height: 22px; }
+
+#me-description:hover span {
+  font-size: 17px;
+  line-height: 22px; }
 
 /* media queries */
 @media (max-width: 480px) {
