@@ -542,7 +542,7 @@ body {
   background-color: #229abf; }
 
 .bg-green {
-  background-color: #999933; }
+  background-color: #899324; }
 
 .bg-yellow {
   background-color: #f9b01e; }
@@ -573,9 +573,10 @@ bodys {
     position: absolute;
     top: 180px;
     left: -220px;
-    font-family: "Lato";
-    font-weight: 300; }
+    font-weight: 300;
+    font-family: "Lato"; }
     .main-area .text-area .title {
+      font-family: "Montserrat";
       text-align: center;
       text-transform: uppercase;
       font-weight: 400;
@@ -722,6 +723,9 @@ footer {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+  .ss-left img, .ss-right img {
+    width: 23px;
+    height: 43px; }
 
 .ss-left {
   top: 165px;
