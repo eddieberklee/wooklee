@@ -609,7 +609,11 @@ body {
   transition: all 0.3s; }
 
 .circle-container:nth-of-type(4), .circle-container:nth-of-type(8) {
-  -webkit-transition: all 0.5s; }
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
 
 .gdesign-circle {
   width: 160px;
@@ -676,30 +680,21 @@ body {
     visibility: visible;
     z-index: 2; }
 
-.circle:nth-of-type(3), .circle-photo:nth-of-type(3) {
-  -o-transition: all 0.08s;
-  -ms-transition: all 0.08s;
-  -moz-transition: all 0.08s;
-  -webkit-transition: all 0.08s;
-  transition: all 0.08s; }
-
-.circle:hover, .circle-photo:hover, .circle:hover span, .circle-photo:hover span {
+.circle:hover, .circle-photo:hover {
   color: white;
   text-decoration: none;
-  font-size: 2.4em; }
+  font-size: 1.4em; }
 
-.circle:nth-of-type(3) span, .circle-photo:nth-of-type(3) span {
-  margin-left: -20px;
-  position: relative;
-  left: 11px;
-  -o-transition: all 0.1s;
-  -ms-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s; }
+.circle img, .circle-photo img {
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
 
-.circle:nth-of-type(3):hover span, .circle-photo:nth-of-type(3):hover span {
-  left: -35px; }
+.circle:hover img#LL, .circle-photo:hover img#LL {
+  width: 112px;
+  height: 41px; }
 
 .circle:nth-of-type(1), .circle-photo:nth-of-type(1) {
   margin-left: 0px; }
@@ -720,16 +715,11 @@ body {
   text-transform: uppercase;
   font-family: "Montserrat";
   font-weight: 500;
-  font-size: 0.5em;
   letter-spacing: 3px;
   line-height: 1.2em; }
 
-#instagram:hover .text-overlay, #mailto:hover .text-overlay {
-  font-size: 0.5em; }
-
 #instagram .text-overlay {
-  left: 77px;
-  font-size: 17px;
+  left: 12px;
   -o-transition: all 0.1s;
   -ms-transition: all 0.1s;
   -moz-transition: all 0.1s;
@@ -737,7 +727,11 @@ body {
   transition: all 0.1s; }
 
 #instagram:hover .text-overlay {
-  left: 16px; }
+  left: 12px;
+  font-size: 18px; }
+
+#mailto:hover .text-overlay {
+  font-size: 18px; }
 
 #mailto img, #instagram img {
   opacity: 1;
