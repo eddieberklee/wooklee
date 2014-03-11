@@ -723,6 +723,14 @@ footer {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+  .ss-left img, .ss-right img {
+    position: relative; }
+
+.ss-left img {
+  left: -20px; }
+
+.ss-right img {
+  right: -20px; }
 
 .ss-left {
   top: 165px;
