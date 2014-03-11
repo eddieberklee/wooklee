@@ -716,19 +716,7 @@ body {
   line-height: 1.2em; }
 
 #instagram .text-overlay {
-  left: 12px;
-  -o-transition: all 0.1s;
-  -ms-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s; }
-
-#instagram:hover .text-overlay {
-  left: 12px;
-  font-size: 18px; }
-
-#mailto:hover .text-overlay {
-  font-size: 18px; }
+  left: 12px; }
 
 #mailto img, #instagram img {
   opacity: 1;
@@ -985,14 +973,6 @@ footer {
   line-height: 25px; }
   #me-description span {
     color: #dc4443; }
-
-#me-description:hover {
-  font-size: 7px;
-  line-height: 22px; }
-
-#me-description:hover span {
-  font-size: 17px;
-  line-height: 22px; }
 
 /* media queries */
 @media (max-width: 480px) {
