@@ -32,6 +32,13 @@
   -webkit-transition: $prop $time
   transition: $prop $time
 
+@mixin css3-transition2($prop,$time,$prop2,$time2)
+  -o-transition: $prop $time, $prop2, $time2
+  -ms-transition: $prop $time, $prop2, $time2
+  -moz-transition: $prop $time, $prop2, $time2
+  -webkit-transition: $prop $time, $prop2, $time2
+  transition: $prop $time, $prop2, $time2
+
 /* css3-rotation */
 @mixin css3-rotation($deg)
   -o-transform: rotate($deg)

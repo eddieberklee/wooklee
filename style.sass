@@ -120,9 +120,9 @@ body
   top: 0
   left: 0
   cursor: default
-  @include css3-transition(all,0.3s)
+  @include css3-transition2(top,0.3s,left,0.3s)
 .circle-container:nth-of-type(4), .circle-container:nth-of-type(8)
-  @include css3-transition(all,0.5s)
+  @include css3-transition2(top,0.5s,left,0.5s)
 
 .gdesign-circle
   width: $a-width
@@ -134,12 +134,21 @@ body
   cursor: pointer
   z-index: 5
 
+  line-height: $a-width
+  text-transform: uppercase
+  color: $green
+  font-family: "Montserrat"
+  font-weight: 400
+  font-size: 16px
+  letter-spacing: 2px
+  text-align: center
+
   .hover-trans
     // visibility: hidden
     color: white
     font-family: "Montserrat"
     font-weight: 400
-    font-size: 18px
+    font-size: 16px
     letter-spacing: 2px
     width: 100%
     height: 100%
@@ -164,13 +173,13 @@ body
   height: $a-width
   line-height: $a-width
   border-radius: $a-width / 2
-  @include css3-transition(all,0.2s)
+  @include css3-transition2(top,0.2s,left,0.2s)
 
   text-transform: uppercase
   color: white
   font-family: "Montserrat"
   font-weight: 400
-  font-size: 1.3em
+  font-size: 16px
   letter-spacing: 2px
   float: left
   position: relative
@@ -214,9 +223,12 @@ body
   font-weight: 400
   letter-spacing: 3px
   line-height: 1.2em
+  @include css3-transition(opacity,0.4s)
+#mailto img, #instagram img
+  @include css3-transition(opacity,0.4s)
 
 #instagram .text-overlay
-  left: 12px
+  left: 18px
 
 #mailto img, #instagram img
   opacity: 1
@@ -412,8 +424,8 @@ $ss-button-margin-top: 165px
 
 #me-description
   position: absolute
-  top: 60px
-  left: 9px
+  top: 66px
+  left: 4px
   // just above the circle
   z-index: 2
   text-align: center
@@ -428,8 +440,13 @@ $ss-button-margin-top: 165px
   line-height: 25px
   span
     color: $red
-
-
+.circle-lastrow
+  width: 160px
+  height: 160px
+  position: absolute
+  top: 0
+  left: 0
+  cursor: default
 
 
 
