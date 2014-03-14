@@ -527,8 +527,14 @@
   position: absolute;
   top: 280px;
   left: 0;
-  z-index: 9999;
+  z-index: 99;
   cursor: url("img/redex.png"), auto; }
+
+#logos .gdesign-circle {
+  border: 1px solid #899324; }
+
+#logos:hover .gdesign-circle {
+  border: 0; }
 
 body {
   background-color: white; }
@@ -540,7 +546,7 @@ body {
   position: absolute;
   top: 420px;
   left: 0;
-  z-index: 100; }
+  z-index: 80; }
 
 .bg-blue {
   background-color: #229abf; }
