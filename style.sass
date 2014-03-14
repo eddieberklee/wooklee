@@ -67,12 +67,20 @@ body
 
 .bg-blue
   background-color: $blue
+.bg-blue:hover
+  background-color: darken($blue,5%)
 .bg-green
   background-color: $green
+.bg-green:hover
+  background-color: darken($green,5%)
 .bg-yellow
   background-color: $yellow
+.bg-yellow:hover
+  background-color: darken($yellow,8%)
 .bg-red
   background-color: $red
+.bg-red:hover
+  background-color: darken($red,8%)
 
 .container-width
   width: $container-width
@@ -124,6 +132,27 @@ body
 .circle-container:nth-of-type(4), .circle-container:nth-of-type(8)
   @include css3-transition2(top,0.5s,left,0.5s)
 
+.circle-container:nth-of-type(1)
+  left: 0
+.circle-container:nth-of-type(2)
+  left: 220px
+.circle-container:nth-of-type(3)
+  left: 440px
+.circle-container:nth-of-type(4)
+  left: 660px
+.circle-container:nth-of-type(5)
+  top: 220px
+  left: 0
+.circle-container:nth-of-type(6)
+  top: 220px
+  left: 220px
+.circle-container:nth-of-type(7)
+  top: 220px
+  left: 440px
+.circle-container:nth-of-type(8)
+  top: 220px
+  left: 660px
+
 .gdesign-circle
   width: $a-width
   height: $a-width
@@ -156,7 +185,7 @@ body
     line-height: 25px
     background-color: $green
     opacity: 0
-    @include css3-transition(opacity,0.3s)
+    @include css3-transition(opacity,0.15s)
     position: absolute
     top: 0
     left: 0
@@ -196,6 +225,7 @@ body
   &:hover .hover-trans
     visibility: visible
     z-index: 2
+  
 .circle:hover
   color: white
   text-decoration: none

@@ -545,14 +545,26 @@ body {
 .bg-blue {
   background-color: #229abf; }
 
+.bg-blue:hover {
+  background-color: #1e89a9; }
+
 .bg-green {
   background-color: #899324; }
+
+.bg-green:hover {
+  background-color: #767f1f; }
 
 .bg-yellow {
   background-color: #f9b01e; }
 
+.bg-yellow:hover {
+  background-color: #e89d06; }
+
 .bg-red {
   background-color: #dc4443; }
+
+.bg-red:hover {
+  background-color: #d02827; }
 
 .container-width {
   width: 820px;
@@ -616,6 +628,34 @@ body {
   -webkit-transition: top 0.5s, left, 0.5s;
   transition: top 0.5s, left, 0.5s; }
 
+.circle-container:nth-of-type(1) {
+  left: 0; }
+
+.circle-container:nth-of-type(2) {
+  left: 220px; }
+
+.circle-container:nth-of-type(3) {
+  left: 440px; }
+
+.circle-container:nth-of-type(4) {
+  left: 660px; }
+
+.circle-container:nth-of-type(5) {
+  top: 220px;
+  left: 0; }
+
+.circle-container:nth-of-type(6) {
+  top: 220px;
+  left: 220px; }
+
+.circle-container:nth-of-type(7) {
+  top: 220px;
+  left: 440px; }
+
+.circle-container:nth-of-type(8) {
+  top: 220px;
+  left: 660px; }
+
 .gdesign-circle {
   width: 160px;
   height: 160px;
@@ -645,11 +685,11 @@ body {
     line-height: 25px;
     background-color: #899324;
     opacity: 0;
-    -o-transition: opacity 0.3s;
-    -ms-transition: opacity 0.3s;
-    -moz-transition: opacity 0.3s;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s;
+    -o-transition: opacity 0.15s;
+    -ms-transition: opacity 0.15s;
+    -moz-transition: opacity 0.15s;
+    -webkit-transition: opacity 0.15s;
+    transition: opacity 0.15s;
     position: absolute;
     top: 0;
     left: 0; }
