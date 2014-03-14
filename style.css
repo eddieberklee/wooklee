@@ -757,18 +757,18 @@ body {
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 1.2em;
-  -o-transition: opacity 0.4s;
-  -ms-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s; }
+  -o-transition: opacity 0.15s;
+  -ms-transition: opacity 0.15s;
+  -moz-transition: opacity 0.15s;
+  -webkit-transition: opacity 0.15s;
+  transition: opacity 0.15s; }
 
 #mailto img, #instagram img {
-  -o-transition: opacity 0.4s;
-  -ms-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s; }
+  -o-transition: opacity 0.15s;
+  -ms-transition: opacity 0.15s;
+  -moz-transition: opacity 0.15s;
+  -webkit-transition: opacity 0.15s;
+  transition: opacity 0.15s; }
 
 #instagram .text-overlay {
   left: 18px; }
