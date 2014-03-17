@@ -62,7 +62,7 @@
 
                   <p>The app features an intuitive clock design that seamlessly fuses the AM and PM. This design allows users to see an event that starts in the morning and lasts into the afternoon, without having to use two separate clocks.</p>
 
-                  <p style='position:absolute;display:block;z-index:100;'>foraday.com</p>
+                  <p style='position:absolute;display:block;z-index:100;'><a href="foradayapp.com">foradayapp.com</a></p>
                 </div>
               </div>
             </div>
@@ -412,6 +412,18 @@
             $('body').prepend($clickarea);
             $clickarea.css('width',$(document).width());
             $clickarea.css('height',main_area_height+270);
+            if ($circ.find('.main-area').find('img').attr('src') == 'img/new-indiv/foraday.png') {
+              $special_clickarea = $('<div class="special_clickarea"></div>');
+              $special_clickarea.css('width','100px');
+              $special_clickarea.css('height','40px');
+              $special_clickarea.css('z-index','100');
+              $special_clickarea.css('background-color','rgba(255,255,255,0)');
+              $clickarea.before($special_clickarea);
+              $('.special_clickarea').click(function(event) {
+                event.preventDefault();
+                window.location.href = 'http://www.foradayapp.com';
+              });
+            }
             $('.clickarea').click(function() {
               $('.whiteout').remove();
               moveBackIcon($circ);
