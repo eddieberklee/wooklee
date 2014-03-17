@@ -398,7 +398,7 @@
             $whiteout = $('<div class="whiteout"></div>');
             $('body').prepend($whiteout);
             $whiteout.css('height',main_area_height+180);
-            $whiteout.css('width',$('#container').width());
+            $whiteout.css('width',$('#container').width()+1000);
             $whiteout.css('width',$(document).width());
             $('.whiteout').click(function() {
               $(this).remove();
@@ -417,6 +417,8 @@
               $special_clickarea.css('width','100px');
               $special_clickarea.css('height','40px');
               $special_clickarea.css('z-index','100');
+              console.log($('.container-width').css('margin-left'));
+              $special_clickarea.css('left',$('.container-width').css('margin-left'));
               $special_clickarea.css('background-color','rgba(255,255,255,0)');
               $clickarea.before($special_clickarea);
               $('.special_clickarea').click(function(event) {
