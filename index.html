@@ -423,7 +423,10 @@
               $clickarea.before($special_clickarea);
               $('.special_clickarea').click(function(event) {
                 event.preventDefault();
-                window.location.href = 'http://www.foradayapp.com';
+                // window.location.href = 'http://www.foradayapp.com';
+                var url = 'http://www.foradayapp.com'
+                var win=window.open(url, '_blank');
+                win.focus();
               });
             }
             $('.clickarea').click(function() {
