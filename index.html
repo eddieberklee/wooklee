@@ -418,7 +418,7 @@
               $special_clickarea.css('height','40px');
               $special_clickarea.css('z-index','100');
               console.log($('.container-width').css('margin-left'));
-              $special_clickarea.css('left',$('.container-width').css('margin-left'));
+              $special_clickarea.css('left',$('.container-width').first().css('margin-left'));
               $special_clickarea.css('background-color','rgba(255,255,255,0)');
               $clickarea.before($special_clickarea);
               $('.special_clickarea').click(function(event) {
