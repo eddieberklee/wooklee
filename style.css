@@ -837,7 +837,7 @@ footer {
   width: 80px;
   position: absolute;
   float: left;
-  z-index: 99;
+  z-index: 70;
   cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
