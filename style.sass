@@ -92,8 +92,16 @@ body
   margin: 0 auto
   overflow: hidden
 
-bodys
+body
   overflow-x: hidden
+
+.full-area
+  width: $container-width
+  position: absolute
+  top: 160px + 60px
+  left: 0px
+  opacity: 0
+  z-index: -1
 
 .main-area
   width: 620px
@@ -102,7 +110,15 @@ bodys
   left: 220px
   opacity: 0
   z-index: -1
-  display: none
+
+  .title
+    font-family: "Montserrat"
+    text-align: center
+    text-transform: uppercase
+    font-weight: 400
+    letter-spacing: 1px
+    margin-top: 7px
+    margin-bottom: 20px
 
   .text-area
     width: 160px
@@ -113,15 +129,6 @@ bodys
     left: -220px
     font-weight: 300
     font-family: "Lato"
-
-    .title
-      font-family: "Montserrat"
-      text-align: center
-      text-transform: uppercase
-      font-weight: 400
-      letter-spacing: 1px
-      margin-top: 7px
-      margin-bottom: 20px
 
 body
   @include css3-user-select
@@ -157,6 +164,9 @@ body
 .circle-container:nth-of-type(8)
   top: 220px
   left: 660px
+.circle-container:nth-of-type(9)
+  top: 440px
+  left: 0
 
 .gdesign-circle
   width: $a-width
@@ -188,6 +198,7 @@ body
     height: 100%
     border-radius: 80px
     line-height: 25px
+    text-transform: none
     background-color: $green
     opacity: 0
     @include css3-transition(opacity,0.15s)
@@ -309,6 +320,9 @@ $ss-side-width: 80px
   height: $h
   position: relative
   @include css3-user-select
+
+#ss-graphicd
+  height: ($h / 2) * 3
 
 .ss-row
   position: relative
@@ -482,6 +496,39 @@ $ss-button-margin-top: 165px
   top: 0
   left: 0
   cursor: default
+
+
+
+
+
+
+
+ul.list-dash
+  list-style: none
+  li
+    text-indent: -5px
+  li:before
+    content: "-"
+    position: relative
+    left: -5px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
