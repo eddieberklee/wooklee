@@ -56,12 +56,16 @@
               </div><!-- /.gdesign-circle -->
 
               <div class='main-area'>
-                <p class="title">Yelp</p>
-
-                <p>The user profile page for Yelp users has always scared me. Inundated by massive amounts of information, I find myself having difficulty focusing on important pieces of information, with my eyes being thrown frantically across different parts of the page.</p>
               </div>
               
               <div class="full-area">
+
+                <p class="title">Yelp</p>
+
+                <p>The user profile page for Yelp users has always scared me. Inundated by massive amounts of information, I find myself having difficulty focusing on important pieces of information, with my eyes being thrown frantically across different parts of the page.</p>
+
+                <div style='height:45px;'></div>
+
                 <p class="title">Challenge</p>
 
                 <p>How do we design a Yelp user's profile page in a way that has better visual heirarchy and ease of use? How do we create an interface that highlights the most important functions and information on a user's profile, that people actually want to use.</p>
@@ -276,15 +280,18 @@
               </div>
 
               <div class='main-area'>
+              </div>
+
+              <div class='full-area'>
+
                 <p class="title">Foraday</p>
 
                 <p>Foraday is a unique effort designed to help users organize and visualize their day better. This is an attempt to bring back the visual and spatial cues provided by an analog clock, largely lost in our shift to a digital experience.</p>
 
                 <p>The app features an intuitive clock design that seamlessly fuses the AM and PM. This design allows users to see an event that starts in the morning and lasts into the afternoon, without having to use two separate clocks.</p>
 
-              </div>
+                <div style='height:45px'></div>
 
-              <div class='full-area'>
                 <p class="title">Challenge</p>
                 <p>
                   Analog clocks offer an amazing array visual and spatial cues. A digital experience also provides an infinite amount of possibilities- but a digital clock with simply numbers telling the time does not give users a true feel for time.
@@ -456,7 +463,7 @@
               </div>
             </div>
 
-            <div class='circle-container' title='<a href="http://www.byteclothing.com">www.byteclothing.com</a>' href='img/new-indiv/byte.jpg'>
+            <div class='circle-container' href='img/new-indiv/byte.jpg'>
               <div class='gdesign-circle'>
                 <div class='hover-trans'>
                   <p>UX<br>/<br>WEB</p>
@@ -723,13 +730,13 @@
           $clickarea = $('<div class="clickarea"></div>');
           $('body').prepend($clickarea);
           $clickarea.css('width',$(document).width());
-          $clickarea.css('height',full_area_height+main_area_height+270);
+          $clickarea.css('height',full_area_height+main_area_height+400);
           if ($circ.find('.title').first().text() == 'Foraday') {
             $embed_clickarea = $('<div class="embed_clickarea"></div>');
             $embed_clickarea.html('<iframe src="http://player.vimeo.com/video/69409864?title=0&amp;byline=0&amp;portrait=0" width="820" height="461" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
             $embed_clickarea.css('position','absolute');
             $embed_clickarea.css('z-index','100');
-            $embed_clickarea.css('top','2724px');
+            $embed_clickarea.css('top','2910px');
             $embed_clickarea.css('left','231px');
             $('body').append($embed_clickarea);
           }
@@ -757,8 +764,8 @@
 
           $whiteout = $('<div class="whiteout"></div>');
           $('body').prepend($whiteout);
-          $whiteout.css('height',full_area_height+main_area_height+180);
-          $('#container').css('height',full_area_height+main_area_height+640);
+          $whiteout.css('height',full_area_height+main_area_height+360);
+          $('#container').css('height',full_area_height+main_area_height+700);
           $whiteout.css('width',$('#container').width()+1000);
           $whiteout.css('width',$(document).width());
           $('.whiteout').click(function() {
@@ -798,6 +805,7 @@
         }
         function moveBackIcon($circ) {
 
+          $('.embed_clickarea').hide();
           $("#ss-photo").css('z-index',90);
           $("#ss-footer").css('z-index',90);
 
