@@ -494,8 +494,8 @@
   height: 1px; }
 
 #container {
-  overflow-y: hidden;
-  height: 2200px; }
+  height: 2200px;
+  overflow-y: hidden; }
 
 .black {
   background-color: black;
@@ -603,6 +603,23 @@ body {
   letter-spacing: 1px;
   margin-top: 7px;
   margin-bottom: 14px; }
+
+.half-area {
+  width: 410px;
+  opacity: 0;
+  z-index: -1;
+  font-weight: 300;
+  font-family: "Lato"; }
+
+.half-area-2 {
+  width: 410px;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  top: 200px;
+  left: 460px;
+  font-weight: 300;
+  font-family: "Lato"; }
 
 .main-area {
   width: 620px;

@@ -361,7 +361,7 @@
                 <p class='title' style='margin-bottom:-4px;'>Final App Design</p>
 
                 <div style='height:20px;'></div>
-                  <iframe src="http://player.vimeo.com/video/69409864?title=0&amp;byline=0&amp;portrait=0" width="820" height="461" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                <iframe src="http://player.vimeo.com/video/69409864?title=0&amp;byline=0&amp;portrait=0" width="820" height="461" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
                 <div style='height:85px;'></div>
 
@@ -724,6 +724,15 @@
           $('body').prepend($clickarea);
           $clickarea.css('width',$(document).width());
           $clickarea.css('height',full_area_height+main_area_height+270);
+          if ($circ.find('.title').first().text() == 'Foraday') {
+            $embed_clickarea = $('<div class="embed_clickarea"></div>');
+            $embed_clickarea.html('<iframe src="http://player.vimeo.com/video/69409864?title=0&amp;byline=0&amp;portrait=0" width="820" height="461" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
+            $embed_clickarea.css('position','absolute');
+            $embed_clickarea.css('z-index','100');
+            $embed_clickarea.css('top','2724px');
+            $embed_clickarea.css('left','231px');
+            $('body').append($embed_clickarea);
+          }
           if ($circ.find('.main-area').find('img').attr('src') == 'img/new-indiv/foraday.png') {
             $special_clickarea = $('<div class="special_clickarea"></div>');
             $special_clickarea.css('width','100px');
@@ -749,6 +758,7 @@
           $whiteout = $('<div class="whiteout"></div>');
           $('body').prepend($whiteout);
           $whiteout.css('height',full_area_height+main_area_height+180);
+          $('#container').css('height',full_area_height+main_area_height+640);
           $whiteout.css('width',$('#container').width()+1000);
           $whiteout.css('width',$(document).width());
           $('.whiteout').click(function() {
@@ -778,7 +788,7 @@
             }
 
             // $('#container').css('height', full_area_height+main_area_height+550);
-            $('#container').css('overflow','visible');
+            // $('#container').css('overflow','visible');
 
             // note it's been moved
             $circ.attr('data-moved','true');
@@ -828,6 +838,23 @@
 
         // DOCUMENT.READY
         $(function() {
+
+          $('header a').click(function() {
+            event.preventDefault();
+            var selector = $(this).attr('href').substring(1);
+            var $selector = $('a[name=\"'+selector+'\"');
+            
+            if (typeof $selector.offset() == 'undefined') {
+              $('html, body').animate({
+                scrollTop: 0,
+              }, 400);
+            } else {
+              var topDistance = $selector.offset().top;
+              $('html, body').animate({
+                scrollTop: topDistance,
+              }, 400);
+            }
+          });
 
           /*
           $('#mailto').click(function() {
