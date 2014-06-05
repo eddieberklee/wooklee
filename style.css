@@ -855,6 +855,12 @@ footer {
 #ss-photo {
   z-index: 90; }
 
+#ss-photo .circle-photo {
+  cursor: url("img/magnifyglass.png"), auto; }
+
+#ss-footer {
+  z-index: 90; }
+
 .ss-row {
   position: relative;
   width: 820px;

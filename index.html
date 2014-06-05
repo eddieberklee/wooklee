@@ -641,7 +641,7 @@
           <div class='hr bg-red'></div>
         </a>
         <div class='vspace110'></div>
-        <div class='ss container-width' style="height:270px;z-index:91;">
+        <div class='ss container-width' id='ss-footer' style="height:270px;">
           <div class='ss-left'>
             <img src='img/ss-left-yellow.png' style='visibility:hidden;' />
           </div>
@@ -685,6 +685,9 @@
     <script type='text/javascript'>
       //<![CDATA[
         function moveIcon($circ) {
+
+          $("#ss-photo").css('z-index',5);
+          $("#ss-footer").css('z-index',5);
 
           var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/);
           if (!isMobile) {
@@ -784,6 +787,10 @@
           });
         }
         function moveBackIcon($circ) {
+
+          $("#ss-photo").css('z-index',90);
+          $("#ss-footer").css('z-index',90);
+
           if ($circ.attr('data-original-top') != null) {
             $('#container').css('overflow','visible');
             $('#container').css('height','1900px');
