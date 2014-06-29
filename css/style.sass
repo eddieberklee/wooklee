@@ -1,3 +1,5 @@
+/* Generated with Sass - DO NOT modify the CSS directly! */
+
 @import css3_mixins
 
 $container-width: 820px
@@ -21,6 +23,10 @@ $theme-red: #d82f2e
 	margin: 0 auto
 	overflow-x: hidden
 
+.row
+	margin-top: 110px
+	margin-bottom: 110px
+
 .circle
 	width: 160px
 	height: 160px
@@ -38,12 +44,21 @@ $theme-red: #d82f2e
 	font-weight: 400
 	font-size: 16px
 	letter-spacing: 2px
-	float: left
+
 	position: relative
 	left: 0
+
 	text-align: center
-	margin-left: 60px
-	overflow: hidden
+	margin-right: 60px
+
+	display: inline-block
+	margin-left: -4px /* whitespace fix for display inline-block */
+	vertical-align: top
+
+	&:first-of-type
+		margin-left: 0
+	&:last-of-type
+		margin-right: 0
 
 
 
