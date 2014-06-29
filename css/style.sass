@@ -1,11 +1,49 @@
+@import css3_mixins
 
 $container-width: 820px
+
+$theme-blue: #2090b2
+$theme-green: #7e8721
+$theme-yellow: #f7a707
+$theme-red: #d82f2e
+
+.theme-blue-bg
+	background-color: $theme-blue
+.theme-green-bg
+	background-color: $theme-green
+.theme-yellow-bg
+	background-color: $theme-yellow
+.theme-red-bg
+	background-color: $theme-red
 
 #container
 	width: $container-width
 	margin: 0 auto
 	overflow-x: hidden
 
+.circle
+	width: 160px
+	height: 160px
+	line-height: 160px
+	border-radius: 80px
+	-o-transition: top 0.2s, left, 0.2s
+	-ms-transition: top 0.2s, left, 0.2s
+	-moz-transition: top 0.2s, left, 0.2s
+	-webkit-transition: top 0.2s, left, 0.2s
+	transition: top 0.2s, left, 0.2s
+	@include css3_transition(top, 0.2s)
+	text-transform: uppercase
+	color: white
+	font-family: "Montserrat"
+	font-weight: 400
+	font-size: 16px
+	letter-spacing: 2px
+	float: left
+	position: relative
+	left: 0
+	text-align: center
+	margin-left: 60px
+	overflow: hidden
 
 
 
