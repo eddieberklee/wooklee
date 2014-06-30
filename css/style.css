@@ -55,7 +55,9 @@
   display: inline-block;
   margin-left: -4px;
   vertical-align: top; }
-  .circle:first-of-type {
+  .circle:nth-of-type(4n+1) {
     margin-left: 0; }
-  .circle:last-of-type {
+  .circle:nth-of-type(4n) {
     margin-right: 0; }
+  .circle:nth-of-type(n+5) {
+    margin-top: 60px; }

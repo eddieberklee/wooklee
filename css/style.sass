@@ -55,10 +55,13 @@ $theme-red: #d82f2e
 	margin-left: -4px /* whitespace fix for display inline-block */
 	vertical-align: top
 
-	&:first-of-type
+	&:nth-of-type(4n+1)
 		margin-left: 0
-	&:last-of-type
+	&:nth-of-type(4n)
 		margin-right: 0
+
+	&:nth-of-type(n+5)
+		margin-top: 60px
 
 
 
