@@ -4,24 +4,39 @@
 
 $container-width: 820px
 
-$theme-blue: #2090b2
-$theme-green: #7e8721
-$theme-yellow: #f7a707
-$theme-red: #d82f2e
+$blue: #2090b2
+$green: #7e8721
+$yellow: #f7a707
+$red: #d82f2e
 
-.theme-blue-bg
-	background-color: $theme-blue
-.theme-green-bg
-	background-color: $theme-green
-.theme-yellow-bg
-	background-color: $theme-yellow
-.theme-red-bg
-	background-color: $theme-red
+.blue-bg
+	background-color: $blue
+.blue-fg
+	color: $blue
+.green-bg
+	background-color: $green
+.green-fg
+	color: $green
+.yellow-bg
+	background-color: $yellow
+.yellow-fg
+	color: $yellow
+.red-bg
+	background-color: $red
+.red-fg
+	color: $red
 
-#container
+
+body
+	margin: 0
+	margin-top: 2px
+
+
+.container
 	width: $container-width
 	margin: 0 auto
 	overflow-x: hidden
+	clear: left
 
 .row
 	margin-top: 110px
@@ -49,6 +64,8 @@ $theme-red: #d82f2e
 	font-size: 16px
 	letter-spacing: 2px
 
+	text-decoration: none
+
 	position: relative
 	left: 0
 
@@ -67,12 +84,19 @@ $theme-red: #d82f2e
 	&:nth-of-type(n+5)
 		margin-top: 60px
 
+.divider
+	height: 1px
 
-
-
-
-
-
+.section-title
+	float: left
+	margin-left: 12px
+	margin-top: 8px
+	text-transform: uppercase
+	font-size: 0.9em
+	font-weight: 300
+	font-family: 'Lato'
+	letter-spacing: 1px
+	margin-bottom: -25px
 
 
 
