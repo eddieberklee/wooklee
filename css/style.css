@@ -37,8 +37,9 @@ body {
 .container {
   width: 820px;
   margin: 0 auto;
-  overflow-x: hidden;
-  clear: left; }
+  overflow: hidden;
+  clear: left;
+  padding: 110px 0; }
 
 .row {
   margin-top: 110px;
@@ -53,11 +54,6 @@ body {
   height: 160px;
   line-height: 160px;
   border-radius: 80px;
-  -o-transition: top 0.2s, left, 0.2s;
-  -ms-transition: top 0.2s, left, 0.2s;
-  -moz-transition: top 0.2s, left, 0.2s;
-  -webkit-transition: top 0.2s, left, 0.2s;
-  transition: top 0.2s, left, 0.2s;
   -o-transition: top 0.2s;
   -ms-transition: top 0.2s;
   -moz-transition: top 0.2s;
@@ -84,6 +80,21 @@ body {
   .circle:nth-of-type(n+5) {
     margin-top: 60px; }
 
+.black {
+  display: block;
+  background-color: black;
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  -o-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s; }
+
 .divider {
   height: 1px; }
 
@@ -97,3 +108,92 @@ body {
   font-family: "Lato";
   letter-spacing: 1px;
   margin-bottom: -25px; }
+
+#photo-slideshow {
+  position: relative; }
+  #photo-slideshow .circle .black {
+    cursor: url("../img/magnifyglass.png"), auto; }
+
+.slideshow-main {
+  height: 380px;
+  position: relative;
+  overflow: hidden; }
+
+.slideshow-page {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .slideshow-page:first-of-type {
+    z-index: 3; }
+
+.slideshow-left, .slideshow-right {
+  position: absolute;
+  top: 160px;
+  z-index: 5;
+  cursor: pointer; }
+
+.slideshow-left {
+  left: -100px; }
+
+.slideshow-right {
+  right: -100px; }
+
+ul {
+  padding: 0;
+  margin: 0 0 10px 25px; }
+
+.title {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 7px;
+  margin-bottom: 4px; }
+
+.indiv {
+  width: 820px;
+  position: absolute;
+  top: 220px;
+  left: 0px;
+  z-index: 8;
+  text-transform: none;
+  color: black;
+  line-height: 1em;
+  font-weight: 300;
+  font-family: "Lato";
+  font-size: 0.9em;
+  line-height: 20px;
+  margin-top: -5px; }
+  .indiv .full-area i {
+    font-size: 12px; }
+
+.square-description, .square-color {
+  display: inline-block;
+  vertical-align: top; }
+
+.square-description {
+  height: 25px;
+  line-height: 25px;
+  margin-left: 8px; }
+
+.square-color {
+  width: 25px;
+  height: 25px; }
+
+.square-orange {
+  background-color: #f9942b; }
+
+.square-red {
+  background-color: #fa201c; }
+
+.square-blue1 {
+  background-color: #32cbfd; }
+
+.square-blue2 {
+  background-color: #0066e7; }
+
+.square-blue3 {
+  background-color: #1c00c1; }
