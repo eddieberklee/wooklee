@@ -42,7 +42,7 @@
         </a>
         <div style="color:#7e8721;width:1000px;float:left;margin-left:12px;margin-top:8px;text-transform:uppercase;font-size:0.9em;font-weight:100;font-family:'Lato';letter-spacing:1px;">Projects</div>
         <div class='vspace110'></div>
-        <div class='ss container-width' id='ss-graphicd' style='overflow:visible;'>
+        <div class='ss container-width' id='ss-graphicd' style='overflow:hidden;'>
           <!-- <div class='ss-left'><img src='img/ss-left-green.png' /></div> -->
           <div class='ss-main' style='position:relative;z-index:90;'>
             <div class='ss-page'>
@@ -191,7 +191,7 @@
                   <img src='img/new-indiv/yelp/4navbar.png' style='margin-top:20px;'>
                 </div>
 
-                <p class='title' style='margin-top:-5px;'>Navigation Bar Redone</p>
+                <p class='title'>Navigation Bar Redone</p>
 
                 <p>
                   Apparent on the user's profile page is clutter that is brought about from the redundancy between its navigation bar and an additional overview section below the user's profile picture.<br>
@@ -280,6 +280,7 @@
               <div class='main-area'>
               </div>
 
+              <a href="http://www.foradayapp.com" id="foraday-link" style="position:absolute;z-index:101;top:70px;left:200px;font-size:1.3em;display:none;">foraday.com</a>
               <div class='full-area'>
 
                 <p class="title">Foraday</p>
@@ -305,17 +306,19 @@
 
                 <div style='height:10px;'></div>
 
-                <div style='width:375px;display:inline-block;'>
-                  <img src="img/new-indiv/foraday/watch-diary-connectdesign.jpg">
-                  <p style='margin-top:9px;'>
-                    <i>One option is to have one analog clock. The AM and PM are indistinguishable from one another. Users would run into the problem of overlapping events for events in the morning and the evening.</i>
-                  </p>
-                </div>
-                <div style='width:400px;margin-left:40px;display:inline-block;'>
-                  <img src="img/new-indiv/foraday/chronotebook.jpg">
-                  <p style='margin-top:9px;'>
-                    <i>Another option is to have two clocks - one for the AM and the otherfor the PM. The problem here is the lack of contuinity from moving from the morning into the evening. This presents an awkward transition and an unnatural dichotomy of time.</i>
-                  </p>
+                <div>
+                  <div style='width:375px;display:inline-block;vertical-align:top;'>
+                    <img src="img/new-indiv/foraday/watch-diary-connectdesign.jpg">
+                    <p style='margin-top:9px;'>
+                      <i>One option is to have one analog clock. The AM and PM are indistinguishable from one another. Users would run into the problem of overlapping events for events in the morning and the evening.</i>
+                    </p>
+                  </div>
+                  <div style='width:400px;margin-left:40px;display:inline-block;vertical-align:top;'>
+                    <img src="img/new-indiv/foraday/chronotebook.jpg">
+                    <p style='margin-top:9px;'>
+                      <i>Another option is to have two clocks - one for the AM and the otherfor the PM. The problem here is the lack of contuinity from moving from the morning into the evening. This presents an awkward transition and an unnatural dichotomy of time.</i>
+                    </p>
+                  </div>
                 </div>
                 
                 <div style='height:80px;'></div>
@@ -526,7 +529,7 @@
             </div>
 
             <div class='circle-container' href='img/new-indiv/logos.png' id='logos'>
-              <div class='gdesign-circle' style='border:1px solid #899324;'>
+              <div class='gdesign-circle' style='border:1px solid #899324;height:158px;'>
                 <div class='hover-trans hover-trans-brand'>
                   <p>LOGOS</p>
                 </div>
@@ -699,6 +702,7 @@
     <script type='text/javascript'>
       //<![CDATA[
         function moveIcon($circ) {
+          $circ.parents(".container-width").css("overflow","visible");
 
           $("#ss-photo").css('z-index',5);
           $("#ss-footer").css('z-index',5);
@@ -731,21 +735,29 @@
           $circ.css('top',0);
           $circ.css('left',0);
 
+
+          $("#foraday-link").show();
           main_area_height = $circ.find('.main-area').height();
           full_area_height = $circ.find('.full-area').height();
           // create a click area
           $clickarea = $('<div class="clickarea"></div>');
-          $('body').prepend($clickarea);
+          $circ.parent().prepend($clickarea);
           $clickarea.css('width',$(document).width());
           $clickarea.css('height',full_area_height+main_area_height+400);
+          leftMargin = ($(document).width() - 820) / 2;
+          $clickarea.css({
+            'position': 'absolute',
+            'left': - leftMargin,
+            'top': -200,
+          });
           if ($circ.find('.title').first().text() == 'Foraday') {
             $embed_clickarea = $('<div class="embed_clickarea"></div>');
             $embed_clickarea.html('<iframe src="http://player.vimeo.com/video/69409864?title=0&amp;byline=0&amp;portrait=0" width="820" height="461" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
             $embed_clickarea.css('position','absolute');
             $embed_clickarea.css('z-index','100');
-            $embed_clickarea.css('top','2910px');
-            $embed_clickarea.css('left','231px');
-            $('body').append($embed_clickarea);
+            $embed_clickarea.css('top','2334px');
+            $embed_clickarea.css('left','0px');
+            $circ.parent().append($embed_clickarea);
           }
           if ($circ.find('.main-area').find('img').attr('src') == 'img/new-indiv/foraday.png') {
             $special_clickarea = $('<div class="special_clickarea"></div>');
@@ -815,6 +827,8 @@
           $('.embed_clickarea').hide();
           $("#ss-photo").css('z-index',90);
           $("#ss-footer").css('z-index',90);
+
+          $("#foraday-link").hide();
 
           if ($circ.attr('data-original-top') != null) {
             $('#container').css('overflow','hidden');
