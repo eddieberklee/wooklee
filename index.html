@@ -280,7 +280,7 @@
               <div class='main-area'>
               </div>
 
-              <a href="http://www.foradayapp.com" id="foraday-link" style="position:absolute;z-index:101;top:70px;left:200px;font-size:1.3em;display:none;">foraday.com</a>
+              <a href="http://www.foradayapp.com" id="foraday-link" style="position:absolute;z-index:101;top:70px;left:200px;font-size:1.1em;display:none;">foradayapp.com</a>
               <div class='full-area'>
 
                 <p class="title">Foraday</p>
@@ -549,10 +549,12 @@
             </div>
 
              <div class='circle-container' style='cursor:default;'>
-              <div>
+              <div style='opacity:0.5'>
+                <!--
                 <div class='hover-trans hover-trans-brand'>
                   <p>GRAPHIC</p>
                 </div>
+                -->
                 <img class="circle-icon" src='img/graphicdesign/iconberkeley.png'/>
               </div>
             </div>
@@ -702,6 +704,7 @@
     <script type='text/javascript'>
       //<![CDATA[
         function moveIcon($circ) {
+          $circ.css('overflow', 'visible');
           $circ.parents(".container-width").css("overflow","visible");
 
           $("#ss-photo").css('z-index',5);

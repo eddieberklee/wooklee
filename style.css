@@ -701,11 +701,10 @@ body {
   left: 0; }
 
 .circle-container:nth-of-type(10) {
-  opacity: 0.5;
   top: 440px;
   left: 220px; }
 
-.gdesign-circle, .circle-container:nth-of-type(10) {
+.gdesign-circle {
   width: 160px;
   height: 160px;
   border-radius: 80px;
@@ -722,7 +721,7 @@ body {
   font-size: 16px;
   letter-spacing: 2px;
   text-align: center; }
-  .gdesign-circle .hover-trans, .circle-container:nth-of-type(10) .hover-trans {
+  .gdesign-circle .hover-trans {
     color: white;
     font-family: "Montserrat";
     font-weight: 400;
@@ -743,12 +742,12 @@ body {
     position: absolute;
     top: 0;
     left: 0; }
-    .gdesign-circle .hover-trans p, .circle-container:nth-of-type(10) .hover-trans p {
+    .gdesign-circle .hover-trans p {
       position: relative;
       top: 44px; }
-  .gdesign-circle .hover-trans-graphic p, .circle-container:nth-of-type(10) .hover-trans-graphic p {
+  .gdesign-circle .hover-trans-graphic p {
     top: 68px; }
-  .gdesign-circle .hover-trans-brand p, .circle-container:nth-of-type(10) .hover-trans-brand p {
+  .gdesign-circle .hover-trans-brand p {
     top: 68px; }
 
 .circle, .circle-photo {
