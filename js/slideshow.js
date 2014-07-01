@@ -1,40 +1,35 @@
 /* Requires this structure:
  *
- * <.ss-left>
- * </.ss-left>
- * <.ss-main>
- *   <.ss-page>
- *     <.ss-row>
- *       <a.circle></a.circle>
- *       <a.circle></a.circle>
- *       <a.circle></a.circle>
- *       <a.circle></a.circle>
- *     </.ss-row>
- *   </.page>
- * </.ss-main>
- * <.ss-right>
- * </.ss-right>
+ * <.slideshow-left></.slideshow-left>
+ * <.slideshow-main>
+ *   <.slideshow-page>
+ *     <something></something>
+ *     <something></something>
+ *     <something></something>
+ *   </.slideshow-page>
+ * </.slideshow-main>
+ * <.slideshow-right></.slideshow-right>
  *
  */
 
 $(function() {
   
   function sendToBack($this, $current) {
-    ss = $this.siblings('.ss-main').children('.ss-page');
+    ss = $this.siblings('.slideshow-main').children('.slideshow-page');
     $ss = $(ss);
   }
   function sendToFront($this, $current) {
-    ss = $this.siblings('.ss-main').children('.ss-page');
+    ss = $this.siblings('.slideshow-main').children('.slideshow-page');
     $ss = $(ss);
   }
   var ss_width = 0;
   var currenti = 0;
   var comingupi;
 
-  $(".ss-right").click(function() {
-    var ss_width = parseInt($(this).siblings('.ss-main').css('width')) + parseInt($(this).siblings('.ss-left').css('width')) + 'px';
+  $(".slideshow-right").click(function() {
+    var ss_width = parseInt($(this).siblings('.slideshow-main').css('width')) + parseInt($(this).siblings('.slideshow-left').css('width')) + 'px';
     $this = $(this);
-    pages = $this.siblings('.ss-main').children('.ss-page');
+    pages = $this.siblings('.slideshow-main').children('.slideshow-page');
 
     $current =  $(pages[currenti]);
     if ((currenti + 1) <= (pages.length - 1)) {
@@ -43,7 +38,7 @@ $(function() {
       comingupi = 0;
     }
     $comingup = $(pages[comingupi]);
-    // var ss_width = $this.siblings('.ss-main').css('width');
+    // var ss_width = $this.siblings('.slideshow-main').css('width');
 
     $current.css('left', '0px');
     $current.css('top', '0px');
@@ -64,10 +59,10 @@ $(function() {
     sendToBack($this, $current);
   });
 
-  $(".ss-left").click(function() {
-    var ss_width = parseInt($(this).siblings('.ss-main').css('width')) + parseInt($(this).siblings('.ss-right').css('width')) + 'px';
+  $(".slideshow-left").click(function() {
+    var ss_width = parseInt($(this).siblings('.slideshow-main').css('width')) + parseInt($(this).siblings('.slideshow-right').css('width')) + 'px';
     $this = $(this);
-    pages = $this.siblings('.ss-main').children('.ss-page');
+    pages = $this.siblings('.slideshow-main').children('.slideshow-page');
 
     $current =  $(pages[currenti]);
     if ((currenti - 1) >= 0) {
@@ -76,7 +71,7 @@ $(function() {
       comingupi = pages.length-1;
     }
     $comingup = $(pages[comingupi]);
-    // var ss_width = $this.siblings('.ss-main').css('width');
+    // var ss_width = $this.siblings('.slideshow-main').css('width');
 
     $current.css('left', '0px');
     $current.css('top', '0px');
