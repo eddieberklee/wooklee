@@ -12,21 +12,34 @@
 </head>
 <body>
 	
-	<div id="container">
+	<div class="divider blue-bg"></div><!-- blue divider line -->
+
+	<header class="container">
+
 		<div class="row">
-			<div class="circle theme-blue-bg">
+			<a class="circle blue-bg" href="http://www.wooklee.com">
 				<img src="img/logo.png" style="margin-top:60px;">
-			</div>
-			<div class="circle theme-green-bg">
-				<span>Work</span>
-			</div>
-			<div class="circle theme-yellow-bg">
+			</a>
+			<a class="circle green-bg" href="#projects">
+				<span>Projects</span>
+			</a>
+			<a class="circle yellow-bg" href="#memories">
 				<span>Memories</span>
-			</div>
-			<div class="circle theme-red-bg">
+			</a>
+			<a class="circle red-bg" href="#me">
 				<span>Me</span>
-			</div>
+			</a>
 		</div><!-- /.row -->
+	</header>
+
+	<a name="projects">
+		<div class="divider green-bg"></div> <!-- green divider line -->
+	</a>
+
+	<div class="section-title green-fg">Projects</div>
+
+	<div class="container">
+		<!-- PROJECTS SECTION -->
 
 		<div class="row">
 			<div class="circle">
@@ -62,73 +75,110 @@
 				<img src="img/circles/graphics/icon-berkeley.png" width="160px">
 			</div>
 		</div><!-- /.row -->
+	</div>
 
+	<a name="memories">
+		<div class="divider yellow-bg"></div><!-- yellow divider line -->
+	</a>
+
+	<div class="section-title yellow-fg">Memories</div>
+
+	<!-- PHOTOS SECTION -->
+
+	<div class="container">
 		<div class="slideshow-main">
-		<div class="page">
-			<div class="circle">
-				<img src="img/circles/photos/01.png">
+			<div class="page">
+				<div class="circle">
+					<img src="img/circles/photos/01.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/02.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/03.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/04.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/05.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/06.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/07.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/08.png">
+				</div>
+			</div><!-- /.page 1 -->
+			<div class="page">
+				<div class="circle">
+					<img src="img/circles/photos/09.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/10.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/11.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/12.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/13.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/14.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/15.png">
+				</div>
+				<div class="circle">
+					<img src="img/circles/photos/16.png">
+				</div>
+			</div><!-- /.page 2 -->
+			<div class="page">
+				<div class="circle">
+					<img src="img/circles/photos/17.png">
+				</div>
+			</div><!-- /.page 3 -->
+		</div>
+	</div>
+
+	<a name="me">
+		<div class="divider red-bg"></div><!-- red divider line -->
+	</a>
+
+	<div class="section-title red-fg">Projects</div>
+
+	<!-- ABOUT ME SECTION -->
+
+	<div class="container">
+		<div class="row">
+			<div class="circle red-bg" style="height:161px;">
+				<img src="img/circles/about/me-outline.png">
 			</div>
 			<div class="circle">
-				<img src="img/circles/photos/02.png">
+				<span class="red-fg">Wook Lee</span>
 			</div>
-			<div class="circle">
-				<img src="img/circles/photos/03.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/04.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/05.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/06.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/07.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/08.png">
-			</div>
-		</div><!-- /.page 1 -->
-		<div class="page">
-			<div class="circle">
-				<img src="img/circles/photos/09.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/10.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/11.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/12.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/13.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/14.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/15.png">
-			</div>
-			<div class="circle">
-				<img src="img/circles/photos/16.png">
-			</div>
-		</div><!-- /.page 2 -->
-		<div class="page">
-			<div class="circle">
-				<img src="img/circles/photos/17.png">
-			</div>
-		</div><!-- /.page 3 -->
+			<a class="circle red-bg" style="margin-left:-4px;" href="mailto:wooklee@berkeley.edu" target="_blank">
+				<img src="img/circles/about/mail.png" width="60px" style="margin-top:50px;">
+			</a>
+			<a class="circle red-bg" style="margin-right:0;" href="http://www.instagram.com/koow" target="_blank">
+				<img src="img/circles/about/instagram.png" width="60px" style="margin-top:50px;">
+			</a>
+		</div>
 	</div>
 
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/header-scroll.js"></script>
 	<script>
-	$(function() {
-		// jquery javascript here
-	});
+		$(function() {
+			// jquery javascript here
+		});
 	</script>
 </body>
 </html>

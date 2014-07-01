@@ -6,22 +6,39 @@
 /* css3-transition */
 /* css3-rotation */
 /* text-selection */
-.theme-blue-bg {
+.blue-bg {
   background-color: #2090b2; }
 
-.theme-green-bg {
+.blue-fg {
+  color: #2090b2; }
+
+.green-bg {
   background-color: #7e8721; }
 
-.theme-yellow-bg {
+.green-fg {
+  color: #7e8721; }
+
+.yellow-bg {
   background-color: #f7a707; }
 
-.theme-red-bg {
+.yellow-fg {
+  color: #f7a707; }
+
+.red-bg {
   background-color: #d82f2e; }
 
-#container {
+.red-fg {
+  color: #d82f2e; }
+
+body {
+  margin: 0;
+  margin-top: 2px; }
+
+.container {
   width: 820px;
   margin: 0 auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  clear: left; }
 
 .row {
   margin-top: 110px;
@@ -52,6 +69,7 @@
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 2px;
+  text-decoration: none;
   position: relative;
   left: 0;
   text-align: center;
@@ -65,3 +83,17 @@
     margin-right: 0; }
   .circle:nth-of-type(n+5) {
     margin-top: 60px; }
+
+.divider {
+  height: 1px; }
+
+.section-title {
+  float: left;
+  margin-left: 12px;
+  margin-top: 8px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 300;
+  font-family: "Lato";
+  letter-spacing: 1px;
+  margin-bottom: -25px; }
